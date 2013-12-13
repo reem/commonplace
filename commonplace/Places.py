@@ -22,9 +22,11 @@ class BaseRoom(BaseObj):
               and room is the room that direction links to.
         """
 
+        if type(doors) != dict:
+            raise TypeError("doors should be a dictionary")
+
         BaseObj.__init__(self, name, description)
         self.doors = doors
-
         self.directions = set(self.doors.iterkeys())
 
 
@@ -38,6 +40,11 @@ class BaseMap(BaseObj):
         rooms: a list of Rooms to add to the map
         start_room: optional index of the starting room in the rooms list
         """
+
+        if type(start_room) != int:
+            raise TypeError("start_room should be an integer index of rooms.")
+        if not 0 <= start_room < len(rooms):
+            raise ValueError("start_room should be a valid index of rooms.")
 
         BaseObj.__init__(self, name, description)
         self.rooms = rooms
