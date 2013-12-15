@@ -5,6 +5,7 @@ Implements a very basic template for eliminating boilerplate code elsewhere
 
 __all__ = ["BaseObj"]
 
+
 class BaseObj(object):
     """
     Base Object that implements a basic str and repr as well as mandating
@@ -21,13 +22,7 @@ class BaseObj(object):
         self.description = description
 
     def __repr__(self):
-        result = ""
-        for info_attribute in ("name", "description"):
-            result += "{!r}\n".format(getattr(self, info_attribute))
-        return result
+        return "{0.name!r}    {0.description!r}".format(self)
 
     def __str__(self):
-        result = ""
-        for info_attribute in ("name, description"):
-            result += "{!s}\n".format(getattr(self, info_attribute))
-        return result
+        return "{0.name}\n{0.description}".format(self)
