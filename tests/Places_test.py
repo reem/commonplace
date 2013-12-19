@@ -29,7 +29,7 @@ class Rooms_Test(object):
         nt.assert_equal(self.test_room.name, self.name)
         nt.assert_equal(self.test_room.description, self.description)
         nt.assert_equal(self.test_room.doors['right'],
-                                                  valid_doors['right'])
+                        valid_doors['right'])
 
     def test_door_typecheck(self):
         "Rooms_Test: Tests the typechecking of the doors attribute."
@@ -41,4 +41,4 @@ class Rooms_Test(object):
         except TypeError:
             pass
         else:
-            raise AssertionError("door typechecking did not work.")
+            raise Exception("door typechecking did not work.")
