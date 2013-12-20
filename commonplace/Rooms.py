@@ -26,6 +26,8 @@ class BrainRoom(pl.BaseRoom):
     def full_info(self):
         "Gives the full information about the room."
         result = self.entrance_info()
+        if self.doors != {}:
+            result += "\n\nDoors:\n{0}".format(base.format_objects(self.doors))
         if self.items != []:
             result += "\n\nItems:\n{0}".format(base.format_objects(self.items))
         if self.npcs != []:
