@@ -61,6 +61,8 @@ class PoemRoom(pl.BaseRoom):
         result = self.entrance_info()
         if self.poem != '' and poem:
             result += "\n\nPoem:\n{0.poem}".format(self)
+        if self.doors != {}:
+            result += "\n\nDoors:\n{0}".format(base.format_objects(self.doors))
         if self.treasure is not None:
             result += "\n\nTreasure:\n{0}".format(
                 base.format_objects(self.treasure))
