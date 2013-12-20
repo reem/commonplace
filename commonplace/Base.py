@@ -3,7 +3,7 @@ Jonathan Reem
 Implements a very basic template for eliminating boilerplate code elsewhere
 """
 
-__all__ = ["BaseObj"]
+__all__ = ["BaseObj", "format_objects"]
 
 
 class BaseObj(object):
@@ -26,3 +26,7 @@ class BaseObj(object):
 
     def __str__(self):
         return "{0.name}\n{0.description}".format(self)
+
+def format_objects(items):
+    return "\n".join(["    {0}. {1.name}".format(i, item)
+                      for i, item in enumerate(items)])
