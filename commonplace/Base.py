@@ -28,5 +28,5 @@ class BaseObj(object):
         return "{0.name}\n{0.description}".format(self)
 
 def format_objects(items):
-    return "\n".join(["    {0}. {1.name}".format(i, item)
+    return "\n".join(["    {0}. {1.name}".format(i+1, item)
                       for i, item in enumerate(items)])
