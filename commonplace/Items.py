@@ -33,13 +33,13 @@ class BaseEquipment(BaseItem):
 
     def _stat_format(self):
         "Formats stats for pretty-printing"
-        stats = "stats:\n"
+        stats = "Stats:\n"
         for stat, boost in self.stats.iteritems():
-            stats += "\t{}: {}\n".format(stat, boost)
+            stats += "    {}: {}\n".format(stat, boost)
         return stats
 
     def __str__(self):
-        return BaseItem.__str__(self) + self._stat_format()
+        return BaseItem.__str__(self) + '\n' + self._stat_format()
 
     def __repr__(self):
-        return BaseItem.__repr__(self) + self._stat_format()
+        return BaseItem.__repr__(self) + '\n' + self._stat_format()
