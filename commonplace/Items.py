@@ -43,3 +43,12 @@ class BaseEquipment(BaseItem):
 
     def __repr__(self):
         return BaseItem.__repr__(self) + '\n' + self._stat_format()
+
+class BaseTreasure(BaseItem):
+    def __init__(self, name, description):
+        BaseItem.__init__(self, name, description, 'Treasure')
+
+class PoemTreasure(BaseTreasure):
+    def __init__(self, name, description, category):
+        BaseTreasure.__init__(self, name, description)
+        self.category = category
