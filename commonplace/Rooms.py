@@ -26,7 +26,7 @@ class BrainRoom(pl.BaseRoom):
 
     @property
     def valid_options(self):
-        result = ["back"]
+        result = []
         if self.doors != {}:
             result.append("doors")
         if self.items != []:
@@ -69,7 +69,7 @@ class PoemRoom(pl.BaseRoom):
 
     @property
     def valid_options(self):
-        result = ["back"]
+        result = []
         if self.doors != {}:
             result.append("doors")
         if self.treasure is not None:
