@@ -7,6 +7,7 @@ Implements the Player class.
 
 
 from commonplace.Base import BaseObj, format_objects
+from commonplace.Exceptions import PlayerDeadException
 
 DEF_EQUIP_SLOTS = {'helmet': None,
                    'armor': None,
@@ -16,14 +17,24 @@ DEF_EQUIP_SLOTS = {'helmet': None,
 
 
 class BasePlayer(BaseObj):
-    def __init__(self, name, description, start_attributes,
-                 start_inventory=None, start_equipment=None,
-                 equipment_slots=DEF_EQUIP_SLOTS):
+    def __init__(self, name, description, start_inventory=None,
+                 start_equipment=None, equipment_slots=DEF_EQUIP_SLOTS,
+                 start_health=100):
         BaseObj.__init__(self, name, description)
-        self.attributes = start_attributes
+        self._health = start_health
         self.inventory = [] if start_inventory is None else start_inventory
         self.equipment = {} if start_equipment is None else start_equipment
         self.equipped = equipment_slots
+
+    @property
+    def health(self):
+        return self._health
+
+    @health.setter
+    def health(self, value):
+        if value <= 0:
+            raise PlayerDeadException
+        self._health = value
 
     def equip(self, equipment, slot):
         if equipment not in self.equipment.iterkeys():
