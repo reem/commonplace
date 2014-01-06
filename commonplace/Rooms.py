@@ -13,10 +13,10 @@ class BrainRoom(pl.BaseRoom):
     "Class used for rooms in the game."
     def __init__(self, name, description, doors, quote, items, npcs, monsters):
         pl.BaseRoom.__init__(name, description, doors)
-        self.quote = quote # String
-        self.items = items # List
-        self.npcs = npcs # List
-        self.monsters = monsters # List
+        self.quote = quote        # String
+        self.items = items        # List
+        self.npcs = npcs          # List
+        self.monsters = monsters  # List
 
     def entrance_info(self):
         "Gives the info to display on entrance to the room."
