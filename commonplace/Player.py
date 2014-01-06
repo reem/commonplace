@@ -49,10 +49,17 @@ class BasePlayer(BaseObj):
 
     def equip(self, equipment, slot):
         if equipment not in self.equipment.iterkeys():
+            print "Attempted Equipment: {}".format(equipment.name)
             raise ValueError("Tried to equip equipment you don't have.")
 
         if slot not in self.equipped.iterkeys():
+            print "Tried to equip to: {}".format(slot)
             raise ValueError("Tried to equip to a slot that is not valid.")
+
+        if equipment.eq_type != slot:
+            print "Tried to equip {} of eq_type {} to slot {}".format(
+                equipment.name, equipment.eq_type, slot)
+            raise ValueError("Tried to equip to the wrong kind of slot.")
 
         self.equipped[slot] = equipment
 
