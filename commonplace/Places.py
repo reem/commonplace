@@ -31,6 +31,12 @@ class BaseRoom(BaseObj):
         self.doors = doors
         self.directions = set(self.doors.iterkeys())
 
+    @property
+    def valid_options(self):
+        result = ["back"]
+        if self.doors != {}:
+            result.append('doors')
+
 
 class BaseMap(BaseObj):
     """
