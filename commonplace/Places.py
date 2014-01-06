@@ -20,6 +20,8 @@ class BaseRoom(BaseObj):
             direction: room
               where direction is a direction such as "right" or "north"
               and room is the room that direction links to.
+
+              NOTE: The burden is on YOU to provide consistent directions.
         """
 
         if type(doors) != dict:
@@ -41,7 +43,7 @@ class BaseMap(BaseObj):
         start_room: optional index of the starting room in the rooms list
         """
 
-        if type(start_room) != int:
+        if not isinstance(start_room, int):
             raise TypeError("start_room should be an integer index of rooms.")
         if not 0 <= start_room < len(rooms):
             raise ValueError("start_room should be a valid index of rooms.")
