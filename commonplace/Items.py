@@ -5,7 +5,7 @@ Implements the base classes for items such as equipment.
 
 __all__ = ['BaseItem', 'BaseEquipment']
 
-from commonplace.Base import BaseObj
+from commonplace.Base import BaseObj, format_objects
 
 
 class BaseItem(BaseObj):
@@ -35,15 +35,30 @@ class BaseEquipment(BaseItem):
         "Formats stats for pretty-printing"
         return "Stats:\n" + format_objects(self.stats)
 
+    def full_info(self):
+        return str(self)
+
     def __str__(self):
-        return BaseItem.__str__(self) + '\n' + self._stat_format()
+        return BaseItem.__str__(self) + '\n' + self.format_stats()
 
     def __repr__(self):
-        return BaseItem.__repr__(self) + '\n' + self._stat_format()
+        return BaseItem.__repr__(self) + '\n' + self.formatt_stats()
+
+
+class BrainEquipment(BaseEquipment):
+    def __init__(self, name, description, eq_type, stats, quote):
+        BaseEquipment.__init__(self, name, description, eq_type, stats)
+        self.quote = quote
+
+    def __str__(self):
+        return "{}\n{}\n{}".format(BaseItem.__str__(self), self.quote,
+                                   self.format_stats())
+
 
 class BaseTreasure(BaseItem):
     def __init__(self, name, description):
         BaseItem.__init__(self, name, description, 'Treasure')
+
 
 class PoemTreasure(BaseTreasure):
     def __init__(self, name, description, category):
