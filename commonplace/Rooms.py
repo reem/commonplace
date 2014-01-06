@@ -73,8 +73,6 @@ class PoemRoom(pl.BaseRoom):
             result.append("treasure")
         if self.guardian is not None:
             result.append("guardian")
-        if self.poem != '' and poem:
-            result.append("poem")
         return result
 
     def full_info(self, poem=True):
