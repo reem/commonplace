@@ -59,6 +59,12 @@ class BaseTreasure(BaseItem):
     def __init__(self, name, description):
         BaseItem.__init__(self, name, description, 'Treasure')
 
+    def fulL_info(self):
+        return str(self)
+
+    def __str__(self):
+        return BaseItem.__str__(self) + '\n' + self.item_type
+
 
 class PoemTreasure(BaseTreasure):
     def __init__(self, name, description, quote, category):
