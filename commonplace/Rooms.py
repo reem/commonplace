@@ -13,16 +13,18 @@ class BrainRoom(pl.BaseRoom):
     "Class used for rooms in the game."
     def __init__(self, name, description, doors, quote, items, npcs, monsters):
         pl.BaseRoom.__init__(name, description, doors)
-        self.quote = quote
-        self.items = items
-        self.npcs = npcs
-        self.monsters = monsters
+        self.quote = quote # String
+        self.items = items # List
+        self.npcs = npcs # List
+        self.monsters = monsters # List
 
+    @property
     def entrance_info(self):
         "Gives the info to display on entrance to the room."
         return "{0.name}\n{1}\n\n{0.quote}\n\n{0.description}".format(
             self, "-" * len(self.name))
 
+    @property
     def valid_options(self):
         result = ["back"]
         if self.doors != {}:
@@ -34,6 +36,7 @@ class BrainRoom(pl.BaseRoom):
         if self.monsters != []:
             result.append("monsters")
 
+    @property
     def full_info(self):
         "Gives the full information about the room."
         result = self.entrance_info()
@@ -58,11 +61,26 @@ class PoemRoom(pl.BaseRoom):
         self.treasure = treasure
         self.guardian = guardian
 
+    @property
     def entrance_info(self):
         "Gives the info to display on entrance to the room."
         return "{0.name}\n{1}\n\n{0.description}\n\n{0.poem}".format(
             self, "-" * len(self.name))
 
+    @property
+    def valid_options(self):
+        result = ["back"]
+        if self.doors != {}:
+            result.append("doors")
+        if self.treasure is not None:
+            result.append("treasure")
+        if self.guardian is not None:
+            result.append("guardian")
+        if self.poem != '' and poem:
+            result.append("poem")
+        return result
+
+    @property
     def full_info(self, poem=True):
         """
         Gives the full information about the room, for PoemRooms this
