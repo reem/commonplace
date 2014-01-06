@@ -5,6 +5,8 @@ January 2014
 Implements Game-Ending Exceptions that can be thrown any time.
 """
 
+from commonplace.Base import BaseObj
+
 
 class GameException(Exception):
     """All game-related exceptions inherit from here.
@@ -23,7 +25,7 @@ class GameException(Exception):
     providing bundled defaulting for GameExceptions.
     """
     def __init__(self, format_list, message=""):
-        self.message = message.format(*format_tuple)
+        super(GameException, self).__init__(message.format(*format_list))
 
 
 class BaseVictoryException(GameException):
@@ -52,14 +54,14 @@ class EnemyVictoryException(BaseDefeatException):
     other enemy victory conditions to come to pass."""
     def __init__(self, format_list,
                  message="{}'s plans came to fruition. Your cause is lost."):
-        super(PlayerDeadException, self).__init__(format_list, message)
+        super(EnemyVictoryException, self).__init__(format_list, message)
 
 
 class FinalBossDeadException(BaseVictoryException):
     """Exception raised when you kill the Final Boss. Causes Victory."""
     def __init__(self, format_list,
                  message="You killed the final boss, {}!"):
-        super(PlayerDeadException, self).__init__(format_list, message)
+        super(FinalBossDeadException, self).__init__(format_list, message)
 
 
 class AltWinException(BaseVictoryException):
@@ -67,13 +69,17 @@ class AltWinException(BaseVictoryException):
     Defaults to Collecting all of some object."""
     def __init__(self, format_list,
                  message="You collected all the {}!"):
-        super(PlayerDeadException, self).__init__(format_list, message)
+        super(AltWinException, self).__init__(format_list, message)
 
 
 class UnhandledOptionError(Exception):
+    "Thrown when an option is unhandled in a menu. Can take any arguments."
     def __init__(self, *args):
-        self.message = "\n".join([arg.name if isinstance(arg, BaseObj) else arg
-                                  for arg in args])
+        super(UnhandledOptionError, self).__init__(
+            "\n".join([arg.name if isinstance(arg, BaseObj) else arg
+                       for arg in args]))
 
-    def __str__(self):
-        return self.message
+
+class MonsterDeadException(GameException):
+    "Thrown when the monster dies in a fight."
+    pass
