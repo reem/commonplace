@@ -73,6 +73,14 @@ class BrainPlayer(BasePlayer):
     def attack(self):
         return self._attack + self.attribute_bonus('attack')
 
-    @attack.setter
-    def attack(self, value):
-        self._attack += value
+    def full_info(self):
+        return "{0}\n{1}\n{}".format(self.format_stats(),
+                                     format_objects(self.equipment),
+                                     format_objects(self.equipped))
+
+    def format_stats(self):
+        return "Health: {0}/{1}\nAttack: {2}+{3}".format(self.health,
+                                                         self.max_health,
+                                                         self._attack,
+                                                         self.attribute_bonus(
+                                                             'attack'))
