@@ -68,3 +68,9 @@ class AltWinException(BaseVictoryException):
     def __init__(self, format_list,
                  message="You collected all the {}!"):
         super(PlayerDeadException, self).__init__(format_list, message)
+
+
+class UnhandledOptionError(Exception):
+    def __init__(self, *args):
+        return "\n".join([arg.name if isinstance(arg, BaseObj) else arg
+                          for arg in args])
