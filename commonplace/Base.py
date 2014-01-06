@@ -27,11 +27,18 @@ class BaseObj(object):
     def __str__(self):
         return "{0.name}\n{0.description}".format(self)
 
+
 def format_objects(items, indent=1):
     "Formats lists or dictionaries for pretty printing."
     if isinstance(items, list):
-        return "\n".join(["    "*indent + "{0}. {1.name}".format(i+1, item)
+        return "\n".join(["    " * indent + "{0}. {1.name}".format(i + 1, item)
                           for i, item in enumerate(items)])
     elif isinstance(items, dict):
-        return "\n".join(["    "*indent + "{k}: {v}".format(k=k, v=v)
+        return "\n".join(["    " * indent + "{k}: {v}".format(k=k, v=v)
                           for k, v in items])
+
+
+def spaced_print(string, pre=True, post=True):
+    print "{0}{1}{2}".format('\n' if pre else '',
+                             string,
+                             '\n' if post else '')
