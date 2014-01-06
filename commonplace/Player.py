@@ -82,9 +82,10 @@ class BrainPlayer(BasePlayer):
         return self._attack + self.attribute_bonus('attack')
 
     def full_info(self):
-        return "{0}\n{1}\n{}".format(self.format_stats(),
-                                     format_objects(self.equipment),
-                                     format_objects(self.equipped))
+        return "{}, {}\n{}\n{}\n{}".format(self.name, self.description,
+                                           self.format_stats(),
+                                           format_objects(self.equipment),
+                                           format_objects(self.equipped))
 
     def format_stats(self):
         return "Health: {0}/{1}\nAttack: {2}+{3}".format(self.health,
