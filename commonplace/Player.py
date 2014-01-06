@@ -18,13 +18,11 @@ DEF_EQUIP_SLOTS = {'helmet': None,
 
 class BasePlayer(BaseObj):
     def __init__(self, name, description, start_inventory=None,
-                 start_equipment=None, equipment_slots=DEF_EQUIP_SLOTS,
-                 start_health=100):
+                 equipment_slots=DEF_EQUIP_SLOTS, start_health=100):
         BaseObj.__init__(self, name, description)
         self._health = start_health
         self._base_health = start_health
         self.inventory = [] if start_inventory is None else start_inventory
-        self.equipment = {} if start_equipment is None else start_equipment
         self.equipped = equipment_slots
 
     def attribute_bonus(self, attribute):
@@ -49,7 +47,7 @@ class BasePlayer(BaseObj):
             self._health += value
 
     def equip(self, equipment, slot):
-        if equipment not in self.equipment.iterkeys():
+        if equipment not in self.inventory:
             print "Attempted Equipment: {}".format(equipment.name)
             raise ValueError("Tried to equip equipment you don't have.")
 
@@ -71,21 +69,19 @@ class BasePlayer(BaseObj):
 
 class BrainPlayer(BasePlayer):
     def __init__(self, name, description, start_inventory,
-                 start_equipment, start_health, base_attack,
-                 equipment_slots=DEF_EQUIP_SLOTS):
+                 start_health, base_attack, equipment_slots=DEF_EQUIP_SLOTS):
         BasePlayer.__init__(self, name, description, start_inventory,
-                            start_equipment, equipment_slots, start_health)
-        self._attack = base_attack
+                            equipment_slots, start_health)
+        self._base_attack = base_attack
 
     @property
     def attack(self):
-        return self._attack + self.attribute_bonus('attack')
+        return self._base_attack + self.attribute_bonus('attack')
 
     def full_info(self):
-        return "{}, {}\n{}\n{}\n{}\n{}".format(self.name, self.description,
+        return "{}, {}\n{}\n{}\n{}".format(self.name, self.description,
                                                self.format_stats(),
                                                format_objects(self.inventory)
-                                               format_objects(self.equipment),
                                                format_objects(self.equipped))
 
     def format_stats(self):
