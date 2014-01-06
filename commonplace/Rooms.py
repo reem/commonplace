@@ -23,6 +23,17 @@ class BrainRoom(pl.BaseRoom):
         return "{0.name}\n{1}\n\n{0.quote}\n\n{0.description}".format(
             self, "-" * len(self.name))
 
+    def valid_options(self):
+        result = ["back"]
+        if self.doors != {}:
+            result.append("doors")
+        if self.items != []:
+            result.append("items")
+        if self.npcs != []:
+            result.append("characters")
+        if self.monsters != []:
+            result.append("monsters")
+
     def full_info(self):
         "Gives the full information about the room."
         result = self.entrance_info()
