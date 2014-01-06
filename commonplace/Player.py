@@ -39,7 +39,7 @@ class BasePlayer(BaseObj):
 
     @health.setter
     def health(self, value):
-        if value <= 0:
+        if self.health + value <= 0:
             raise PlayerDeadException
         elif self.health + value >= self.max_health:
             self._health = self.max_health
