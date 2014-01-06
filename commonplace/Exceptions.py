@@ -72,5 +72,7 @@ class AltWinException(BaseVictoryException):
 
 class UnhandledOptionError(Exception):
     def __init__(self, *args):
-        return "\n".join([arg.name if isinstance(arg, BaseObj) else arg
-                          for arg in args])
+        self.message = "\n".join([arg.name if isinstance(arg, BaseObj) else arg
+                                  for arg in args])
+    def __str__(self):
+        return self.message
