@@ -31,13 +31,9 @@ class BaseEquipment(BaseItem):
         self.eq_type = eq_type
         self.stats = stats
 
-    @property
-    def formatted_stats(self):
+    def format_stats(self):
         "Formats stats for pretty-printing"
-        stats = "Stats:\n"
-        for stat, boost in self.stats.iteritems():
-            stats += "    {}: {}\n".format(stat, boost)
-        return stats
+        return "Stats:\n" + format_objects(self.stats)
 
     def __str__(self):
         return BaseItem.__str__(self) + '\n' + self._stat_format()
