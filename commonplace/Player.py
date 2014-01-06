@@ -22,19 +22,30 @@ class BasePlayer(BaseObj):
                  start_health=100):
         BaseObj.__init__(self, name, description)
         self._health = start_health
+        self._base_health = start_health
         self.inventory = [] if start_inventory is None else start_inventory
         self.equipment = {} if start_equipment is None else start_equipment
         self.equipped = equipment_slots
+
+    def attribute_bonus(self, attribute):
+        return sum([equipment.stats[attribute] for _, equipment in self.equipped])
 
     @property
     def health(self):
         return self._health
 
+    @property
+    def max_health(self):
+        return self._base_health + self.attribute_bonus('health')
+
     @health.setter
     def health(self, value):
         if value <= 0:
             raise PlayerDeadException
-        self._health = value
+        elif self.health + value >= self.max_health:
+            self._health = self.max_health
+        else:
+            self._health += value
 
     def equip(self, equipment, slot):
         if equipment not in self.equipment.iterkeys():
@@ -50,3 +61,18 @@ class BasePlayer(BaseObj):
                                     format_objects(getattr(self, attribute)))
 
 
+class BrainPlayer(BasePlayer):
+    def __init__(self, name, description, start_inventory,
+                 start_equipment, equipment_slots=DEF_EQUIP_SLOTS,
+                 start_health, base_attack):
+        BasePlayer.__init__(self, name, description, start_inventory,
+                            start_equipment, equipment_slots, start_health)
+        self._attack = base_attack
+
+    @property
+    def attack(self):
+        return self._attack + self.attribute_bonus('attack')
+
+    @attack.setter
+    def attack(self, value):
+        self._attack += value
