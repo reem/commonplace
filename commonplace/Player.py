@@ -28,7 +28,8 @@ class BasePlayer(BaseObj):
         self.equipped = equipment_slots
 
     def attribute_bonus(self, attribute):
-        return sum([equipment.stats[attribute] for _, equipment in self.equipped])
+        return sum([equipment.stats[attribute]
+                    for _, equipment in self.equipped])
 
     @property
     def health(self):
@@ -70,8 +71,8 @@ class BasePlayer(BaseObj):
 
 class BrainPlayer(BasePlayer):
     def __init__(self, name, description, start_inventory,
-                 start_equipment, equipment_slots=DEF_EQUIP_SLOTS,
-                 start_health, base_attack):
+                 start_equipment, start_health, base_attack,
+                 equipment_slots=DEF_EQUIP_SLOTS):
         BasePlayer.__init__(self, name, description, start_inventory,
                             start_equipment, equipment_slots, start_health)
         self._attack = base_attack
