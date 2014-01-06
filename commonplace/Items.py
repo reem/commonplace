@@ -31,7 +31,8 @@ class BaseEquipment(BaseItem):
         self.eq_type = eq_type
         self.stats = stats
 
-    def _stat_format(self):
+    @property
+    def formatted_stats(self):
         "Formats stats for pretty-printing"
         stats = "Stats:\n"
         for stat, boost in self.stats.iteritems():
