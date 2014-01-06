@@ -61,6 +61,11 @@ class BaseTreasure(BaseItem):
 
 
 class PoemTreasure(BaseTreasure):
-    def __init__(self, name, description, category):
+    def __init__(self, name, description, quote, category):
         BaseTreasure.__init__(self, name, description)
         self.category = category
+        self.quote = quote
+
+    def full_info(self):
+        return "{}\n{}\n{}".format(BaseTreasure.__str__(self), self.quote
+                                   self.category)
