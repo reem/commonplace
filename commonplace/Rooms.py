@@ -18,7 +18,6 @@ class BrainRoom(pl.BaseRoom):
         self.npcs = npcs # List
         self.monsters = monsters # List
 
-    @property
     def entrance_info(self):
         "Gives the info to display on entrance to the room."
         return "{0.name}\n{1}\n\n{0.quote}\n\n{0.description}".format(
@@ -36,7 +35,6 @@ class BrainRoom(pl.BaseRoom):
         if self.monsters != []:
             result.append("monsters")
 
-    @property
     def full_info(self):
         "Gives the full information about the room."
         result = self.entrance_info()
@@ -61,7 +59,6 @@ class PoemRoom(pl.BaseRoom):
         self.treasure = treasure
         self.guardian = guardian
 
-    @property
     def entrance_info(self):
         "Gives the info to display on entrance to the room."
         return "{0.name}\n{1}\n\n{0.description}\n\n{0.poem}".format(
@@ -80,7 +77,6 @@ class PoemRoom(pl.BaseRoom):
             result.append("poem")
         return result
 
-    @property
     def full_info(self, poem=True):
         """
         Gives the full information about the room, for PoemRooms this
