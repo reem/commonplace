@@ -63,7 +63,7 @@ def read_quotes(quote_filename):
     assert raw_quotes[line_num] == 'Categories:\n'
     line_num += 1
     while raw_quotes[line_num][0:4] == '    ':
-        categories.add(raw_quotes[line_num].strip()[4:])
+        categories.add(raw_quotes[line_num].strip())
         line_num += 1
 
     quotes = {category: [] for category in categories}
