@@ -43,3 +43,7 @@ def spaced_print(string, pre=True, post=True):
     print "{0}{1}{2}".format('\n' if pre else '',
                              string,
                              '\n' if post else '')
+
+def bumped_range(stop):
+    "Range for non computer scientists (aka for prompting)."
+    return range(1, stop+1)
