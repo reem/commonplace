@@ -1,7 +1,8 @@
-from Generate import generate_all
-from Game import PoemGame
+from commonplace.Generate import generate_all
+from commonplace.Game import PoemGame
 
 def main():
+    "Generates and runs the game."
     game_map, game_player = generate_all()
     name = "The Commonplace"
     with open('description.txt') as description_file:
