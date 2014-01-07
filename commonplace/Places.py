@@ -7,7 +7,7 @@ Implements BaseRoom and BaseMap classes
 __all__ = ['BaseRoom', 'BaseMap']
 
 from commonplace.Base import BaseObj
-
+# pylint: disable=R0903
 
 class BaseRoom(BaseObj):
     """
@@ -33,6 +33,7 @@ class BaseRoom(BaseObj):
 
     @property
     def valid_options(self):
+        "Returns the valid choices for prompting."
         result = ["back"]
         if self.doors != {}:
             result.append('doors')
