@@ -89,6 +89,14 @@ class BrainMonster(BaseMonster):
                    drop, quote, monster_type)
 
     @classmethod
+    def shadow_guardian(cls, name, description, drop, quote,
+                        start_health=200, attack=30,
+                        monster_type='guardian'):
+        "Alternative constructor for guardians."
+        return cls(name, description, start_health, attack,
+                   drop, quote, monster_type)
+
+    @classmethod
     def set_difficulty(cls, value, increment=False):
         "Changes the __difficulty attribute for mass generation."
         if increment:
