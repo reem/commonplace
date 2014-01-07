@@ -6,7 +6,7 @@ Implements Game-Ending Exceptions that can be thrown any time.
 """
 
 from commonplace.Base import BaseObj
-
+# pylint: disable=W0142
 
 class GameException(Exception):
     """All game-related exceptions inherit from here.
