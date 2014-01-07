@@ -8,6 +8,7 @@ Implements the Player class.
 
 from commonplace.Base import BaseObj, format_objects
 from commonplace.Exceptions import PlayerDeadException
+# pylint: disable=R0913
 
 DEF_EQUIP_SLOTS = {'helmet': None,
                    'armor': None,
@@ -20,13 +21,14 @@ class BasePlayer(BaseObj):
     """Base Player class. All Player classes inherit from this."""
     def __init__(self, name, description, start_health,
                  base_attack, start_inventory=None,
-                 equipment_slots=DEF_EQUIP_SLOTS):
+                 equipment_slots=None):
         BaseObj.__init__(self, name, description)
         self._health = start_health
         self._base_health = start_health
         self._base_attack = base_attack
         self.inventory = [] if start_inventory is None else start_inventory
-        self.equipped = equipment_slots
+        self.equipped = DEF_EQUIP_SLOTS if equipment_slots is None \
+                        else equipment_slots
 
     def attribute_bonus(self, attribute):
         "Gets the bonus from equipment to a specific stat."
@@ -84,7 +86,7 @@ class BasePlayer(BaseObj):
 class BrainPlayer(BasePlayer):
     "The player used in the Brain/Commonplace game."
     def __init__(self, name, description, start_inventory,
-                 start_health, base_attack, equipment_slots=DEF_EQUIP_SLOTS):
+                 start_health, base_attack, equipment_slots=None):
         BasePlayer.__init__(self, name, description, start_health,
                             base_attack, start_inventory,
                             equipment_slots)
