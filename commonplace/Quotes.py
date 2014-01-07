@@ -6,7 +6,7 @@ Extracts and exports Quotes
 """
 
 QUOTE_FILE = 'quotes.txt'
-QUOTES = read_quotes(QUOTE_FILE)
+CATEGORIES, QUOTES = read_quotes(QUOTE_FILE)
 # pylint: disable=R0903, R0913
 
 
@@ -99,3 +99,5 @@ def read_quotes(quote_filename):
 
         quotes[category].append(Quote(quote_text, author, category))
         current_quote_num += 1
+
+    return categories, quotes
