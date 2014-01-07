@@ -92,7 +92,7 @@ def read_quotes(quote_filename):
 
         line_num += 1  # Advance to Category:\n
         assert raw_quotes[line_num] == 'Category:\n'
-        line_num += 1  # Adance to category text
+        line_num += 1  # Advance to category text
 
         category = raw_quotes[line_num].strip()
         assert category in categories
