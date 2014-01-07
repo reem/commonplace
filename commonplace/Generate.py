@@ -130,7 +130,7 @@ SUMMER_WINTER_SET = ItemSet(
     "Summer/Winter Set",
     Items.BrainEquipment(
         "Sword of Invincible Summer", "The sword glows a fiery red.",
-        'weapon', {'health': -500, 'attack': 2000},
+        'weapon', {'health': -1000, 'attack': 5000},
         "... I found there was, within me, an invincible summer."
         "\n    - Albert Camus"),
 
@@ -147,7 +147,7 @@ SUMMER_WINTER_SET = ItemSet(
     Items.BrainEquipment(
         "Armor of Winter",
         "The armor is cold and extremely heavy, but unblemished.",
-        'armor', {'health': 1000, 'attack': -200},
+        'armor', {'health': 2000, 'attack': -200},
         "In the midst of Winter ...\n    - Albert Camus"),
 
     Items.BrainEquipment(
