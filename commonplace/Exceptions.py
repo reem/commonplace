@@ -83,3 +83,7 @@ class UnhandledOptionError(Exception):
 class MonsterDeadException(GameException):
     "Thrown when the monster dies in a fight."
     pass
+
+class AbortFightException(GameException):
+    "Thrown when a player runs from a fight."
+    pass
