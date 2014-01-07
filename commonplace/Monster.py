@@ -42,6 +42,12 @@ class BaseMonster(BaseObj):
                                                    self.health,
                                                    self.attack)
 
+    def format_stats(self):
+        "Just stat information for fighting."
+        return "Health: {}/{}\nAttack: {}".format(self.health,
+                                                  self.max_health,
+                                                  self.attack)
+
 
 class BrainMonster(BaseMonster):
     "Implements monsters with quotes and multiple custom constructors.."
