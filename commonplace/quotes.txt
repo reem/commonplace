@@ -1,0 +1,24 @@
+Categories:
+    One
+    Two
+    Three
+
+1
+Text Text Text
+Author
+Category1
+
+2
+Other Text Text
+Author2
+Category2
+
+3
+Separate Text
+Author3
+Category1
+
+4
+Fourth Test
+Author4
+Category2
