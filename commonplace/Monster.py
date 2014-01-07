@@ -7,6 +7,7 @@ Implements the BaseMonster, BrainMonster and PoemGuardian classes.
 
 from commonplace.Base import BaseObj
 from commonplace.Exceptions import MonsterDeadException
+# pylint: disable=R0913
 
 
 class BaseMonster(BaseObj):
@@ -67,6 +68,7 @@ class BrainMonster(BaseMonster):
     def shadow_knight(cls, name, description, drop, quote,
                       start_health=30, attack=6,
                       monster_type='knight'):
+        "Alternative constructor with useful defaults."
         return cls(name, description, start_health, attack,
                    drop, quote, monster_type)
 
@@ -74,6 +76,7 @@ class BrainMonster(BaseMonster):
     def shadow_gargantuan(cls, name, description, drop, quote,
                           start_health=100, attack=15,
                           monster_type='gargantuan'):
+        "Alternative constructor with useful defaults."
         return cls(name, description, start_health, attack,
                    drop, quote, monster_type)
 
@@ -81,6 +84,7 @@ class BrainMonster(BaseMonster):
     def shadow_giant(cls, name, description, drop, quote,
                      start_health=50, attack=10,
                      monster_type='giant'):
+        "Alternative constructor with useful defaults."
         return cls(name, description, start_health, attack,
                    drop, quote, monster_type)
 
