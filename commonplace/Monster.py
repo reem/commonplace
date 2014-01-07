@@ -44,7 +44,7 @@ class BaseMonster(BaseObj):
 
 
 class BrainMonster(BaseMonster):
-    "Implements monsters."
+    "Implements monsters with quotes and multiple custom constructors.."
     __difficulty = 1
 
     def __init__(self, name, description, start_health, attack, drop,
@@ -85,3 +85,10 @@ class BrainMonster(BaseMonster):
             cls.__difficulty += value
         else:
             cls.__difficulty = value
+
+    def full_info(self):
+        "Full information for prompting."
+        return "{}\n{}\nHealth: {}\nAttack: {}".format(BaseObj.__str__(self),
+                                                       self.quote,
+                                                       self.health,
+                                                       self.attack)
