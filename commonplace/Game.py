@@ -23,6 +23,10 @@ from commonplace.Base import (format_objects,
 from commonplace.Items import BaseEquipment, BaseTreasure
 from commonplace.Rooms import BrainRoom, PoemRoom
 
+# Unfortunately I don't have time to actually fix this
+# right now. I might later.
+# pylint: disable=R0912, R0915
+
 
 class PoemGame(BaseObj):
 
