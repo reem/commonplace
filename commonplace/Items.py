@@ -4,22 +4,20 @@ Implements the classes for items such as equipment.
 """
 
 from commonplace.Base import BaseObj, format_objects
+# pylint: disable=R0903, R0913
 
 
 class BaseItem(BaseObj):
-
     """
     Items should inherit from this class, and should define their item_type
     in their constructor. See BaseEquipment for an example.
     """
-
     def __init__(self, name, description, item_type):
         BaseObj.__init__(self, name, description)
         self.item_type = item_type
 
 
 class BaseEquipment(BaseItem):
-
     """
     Equipment should inherit from this class.
 
@@ -27,7 +25,6 @@ class BaseEquipment(BaseItem):
     stats: a dictionary of {stat: boost} pairs.
         "boost" can be negative!
     """
-
     def __init__(self, name, description, eq_type, stats):
         BaseItem.__init__(self, name, description, 'Equipment')
         self.eq_type = eq_type
@@ -49,9 +46,7 @@ class BaseEquipment(BaseItem):
 
 
 class BrainEquipment(BaseEquipment):
-
     "Equipment specific for commonplace game."
-
     def __init__(self, name, description, eq_type, stats, quote):
         BaseEquipment.__init__(self, name, description, eq_type, stats)
         self.quote = quote
@@ -62,9 +57,7 @@ class BrainEquipment(BaseEquipment):
 
 
 class BaseTreasure(BaseItem):
-
     "Base Treasure class. All treasure inherits from this."
-
     def __init__(self, name, description):
         BaseItem.__init__(self, name, description, 'Treasure')
 
