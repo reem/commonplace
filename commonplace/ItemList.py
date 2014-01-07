@@ -6,10 +6,8 @@ Items is of the form:
 """
 
 from commonplace.Quotes import CATEGORIES
-# pylint: disable=R0903
-
-ITEM_FILE = "items.txt"
-ITEMS = create_items_from_file(ITEM_FILE)
+from commonplace.Base import bumped_range
+# pylint: disable=R0903,R0913
 
 
 class ItemTemplate(object):
@@ -61,19 +59,25 @@ def create_items_from_file(item_filename):
     with open(item_filename, 'r') as item_file:
         raw_items = item_file.readlines()
 
-    items = {category: {} for category in CATEGORIES}
+    items = {category: {strength: [] for strength in bumped_range(4)}
+             for category in CATEGORIES}
 
     line_num = 0
     current_item_num = 1
 
     types = set()
 
+    assert raw_items[line_num] == 'Types:\n'
+    line_num += 1
+
     while raw_items[line_num][0:4] == '    ':
-        types.add(raw_items[line_num].split())
+        types.add(raw_items[line_num].strip())
+        line_num += 1
 
     line_num += 1  # Swallow \n between sections
 
-    while line_num != len(raw_items) - 1:
+    while line_num < len(raw_items) - 1:
+
         current_item_num_str = str(current_item_num) + '\n'
         assert current_item_num_str == raw_items[line_num]
 
@@ -98,6 +102,7 @@ def create_items_from_file(item_filename):
 
         line_num += 1  # Advance to Strength: Num\n
         assert raw_items[line_num][0:10] == 'Strength: '
+
         try:
             strength = int(raw_items[line_num].strip()[10:])
         except ValueError:
@@ -111,8 +116,14 @@ def create_items_from_file(item_filename):
         item_type = raw_items[line_num].strip()
         assert item_type in types
 
+        line_num += 2
+
+        current_item_num += 1
         new_item = ItemTemplate(name, description, category,
                                 strength, item_type)
         items[category][strength].append(new_item)
 
     return items
+
+ITEM_FILE = "./commonplace/items.txt"
+ITEMS = create_items_from_file(ITEM_FILE)

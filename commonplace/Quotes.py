@@ -5,8 +5,6 @@ January 2014
 Extracts and exports Quotes
 """
 
-QUOTE_FILE = 'quotes.txt'
-CATEGORIES, QUOTES = read_quotes(QUOTE_FILE)
 # pylint: disable=R0903, R0913
 
 
@@ -72,7 +70,8 @@ def read_quotes(quote_filename):
     assert raw_quotes[line_num] == 'Quotes:\n'
 
     current_quote_num = 1
-    while line_num != len(raw_quotes) - 1:
+    while line_num < len(raw_quotes) - 1:
+        line_num += 1
         current_quote_str = str(current_quote_num) + '\n'
         while raw_quotes[line_num] != current_quote_str:
             line_num += 1
@@ -84,6 +83,7 @@ def read_quotes(quote_filename):
         quote_text = ''
         while raw_quotes[line_num] != 'Author:\n':
             quote_text += raw_quotes[line_num]
+            line_num += 1
 
         # Ensure that we haven't reached the end of the file or something.
         assert raw_quotes[line_num] == 'Author:\n'
@@ -101,3 +101,6 @@ def read_quotes(quote_filename):
         current_quote_num += 1
 
     return categories, quotes
+
+QUOTE_FILE = './commonplace/quotes.txt'
+CATEGORIES, QUOTES = read_quotes(QUOTE_FILE)

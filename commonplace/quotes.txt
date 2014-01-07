@@ -1,24 +1,37 @@
 Categories:
-    One
-    Two
-    Three
+    Category1
+    Category2
+
+Quotes:
 
 1
+Text:
 Text Text Text
+Author:
 Author
+Category:
 Category1
 
 2
+Text:
 Other Text Text
+Author:
 Author2
+Category:
 Category2
 
 3
+Text:
 Separate Text
+Author:
 Author3
+Category:
 Category1
 
 4
+Text:
 Fourth Test
+Author:
 Author4
+Category:
 Category2

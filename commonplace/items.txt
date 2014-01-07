@@ -1,0 +1,28 @@
+Types:
+    Helmet
+    Armor
+    Sword
+    Shield
+    Ring
+
+1
+Name:
+Sword of Invincible Summer
+Description:
+The blade is hot and grows fiery red
+Category:
+Category1
+Strength: 4
+Type:
+Sword
+
+2
+Name:
+Helmet of Winter
+Description:
+The helmet is cold and heavy
+Category:
+Category1
+Strength: 4
+Type:
+Helmet
