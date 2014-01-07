@@ -4,7 +4,7 @@ Implements a very basic template for eliminating boilerplate code elsewhere
 """
 
 __all__ = ["BaseObj", "format_objects"]
-
+# pylint: disable=R0903
 
 class BaseObj(object):
     """
