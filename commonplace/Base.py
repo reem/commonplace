@@ -39,6 +39,7 @@ def format_objects(items, indent=1):
 
 
 def spaced_print(string, pre=True, post=True):
+    "Prints with spaces."
     print "{0}{1}{2}".format('\n' if pre else '',
                              string,
                              '\n' if post else '')
