@@ -8,6 +8,7 @@ playgame and playturn methods.
 
 from random import random
 from time import sleep
+from operator import contains
 
 from commonplace.Exceptions import (BaseVictoryException,
                                     BaseDefeatException,
@@ -18,7 +19,8 @@ from commonplace.Exceptions import (BaseVictoryException,
 from commonplace.Base import (format_objects,
                               spaced_print,
                               BaseObj,
-                              bumped_range)
+                              bumped_range,
+                              assert_with_dump)
 
 from commonplace.Items import BaseEquipment, BaseTreasure
 from commonplace.Rooms import BrainRoom, PoemRoom
@@ -90,7 +92,8 @@ class PoemGame(BaseObj):
                 break
 
             elif main_choice == 'items':
-                assert isinstance(self.current_room, BrainRoom)
+                assert_with_dump(self.current_room, BrainRoom,
+                                 callback=isinstance)
 
                 spaced_print(format_objects(self.current_room.items))
                 item_choice = prompt(
@@ -143,8 +146,9 @@ class PoemGame(BaseObj):
                             if item_choice == 'back':
                                 continue
                             elif item_choice == 'equip':
-                                assert(inventory_item.eq_type in
-                                       self.player.equipped.iterkeys())
+                                assert_with_dump(self.player.equipped,
+                                                 inventory_item.eq_type,
+                                                 contains)
                                 self.player.equip(inventory_item,
                                                   inventory_item.eq_type)
 
@@ -156,7 +160,8 @@ class PoemGame(BaseObj):
                                 continue
 
             elif main_choice == 'monsters':
-                assert isinstance(self.current_room, BrainRoom)
+                assert_with_dump(self.current_room, BrainRoom,
+                                 callback=isinstance)
 
                 spaced_print("Monsters:\n{}".format(
                     format_objects(self.current_room.monsters)))
@@ -188,7 +193,8 @@ class PoemGame(BaseObj):
                             spaced_print("You escaped.")
 
             elif main_choice == 'guardian':
-                assert isinstance(self.current_room, PoemRoom)
+                assert_with_dump(self.current_room, PoemRoom,
+                                 callback=isinstance)
 
                 spaced_print("Guardian:\n{}".format(
                     str(self.current_room.guardian)))
