@@ -63,7 +63,7 @@ class PoemGame(BaseObj):
         self.turn_count += 1
         print "Turn {0.turn_count}:\n".format(self)
 
-        self.player.health += self.player.max_health / 10
+        self.player.health += self.player.max_health / 5
 
         spaced_print("Location:", pre=False)
         print self.current_room.full_info()
