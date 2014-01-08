@@ -7,8 +7,14 @@ Generates all game objects.
 
 import commonplace.Items as Items
 import commonplace.Monster as Monster
-from commonplace.Quotes import QUOTES
+import commonplace.Player as Player
+import commonplace.Rooms as Rooms
+import commonplace.Places as Places
+
+from commonplace.Quotes import QUOTES#, CATEGORIES
 from commonplace.ItemList import ITEMS
+from commonplace.Map import MAP
+from commonplace.MonsterList import MONSTERS
 # pylint: disable=R0903, R0913
 
 
@@ -21,10 +27,53 @@ def generate_player():
     "Generates a player."
     pass
 
+def generate_hall(hall_template):
+    "Generates a hall."
+    pass
+
+def generate_throne(throne_template):
+    "Generates a throne."
+    pass
+
+def generate_room(room_template):
+    """
+    Generates a room from a template.
+    NOTE: You need to run fix_doors on the list of rooms after
+    generating them or the doors will not work properly.
+    """
+
+    if room_template.name == "Hall":
+        return generate_hall(room_template)
+    elif room_template.name == "Throne":
+        return generate_throne(room_template)
+
+    monster = generate_monster(MONSTERS.pop(),
+                               room_template.category)
+    return Rooms.BrainRoom(room_template.name,
+                           room_template.description,
+                           room_template.doors,
+                           str(QUOTES[room_template.category].pop()),
+                           generate_item(room_template.category,
+                                         room_template.difficulty),
+                           [], [monster])
+
+def fix_doors(rooms):
+    "Changes index based doors to real references."
+    for room in rooms:
+        for direction in room.doors:
+            room.doors[direction] = rooms[room.doors[direction]]
+    return rooms
 
 def generate_map():
-    "Generates a map."
-    pass
+    "Generates the map."
+    map_template = MAP
+    rooms = [generate_room(room_template)
+             for room_template in map_template.rooms]
+    rooms = fix_doors(rooms)
+
+    return Places.BaseMap(map_template.name,
+                          map_template.description,
+                          rooms, 0)
 
 def generate_item(category, strength):
     "Generates an item appropriate for a category and strength."
@@ -84,10 +133,10 @@ def stats_from_template(item_template):
     return master_lookup[item_template.item_type][item_template.strength]
 
 
-def generate_monster(monster_template):
+def generate_monster(monster_template, category):
     "Generates a monster from a monster_template"
     quote = QUOTES[monster_template.category].pop()
-    drop = generate_item(monster_template.category,
+    drop = generate_item(category,
                          monster_template.strength)
 
     return monster_template.correct_constructor(monster_template.name,
