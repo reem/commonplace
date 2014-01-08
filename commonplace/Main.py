@@ -1,3 +1,11 @@
+"""
+Jonathan Reem
+January 2014
+
+File that is actually run in order to play a game.
+"""
+
+
 from commonplace.Generate import generate_all
 from commonplace.Game import PoemGame
 
