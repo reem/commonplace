@@ -5,7 +5,7 @@ def main():
     "Generates and runs the game."
     game_map, game_player = generate_all()
     name = "The Commonplace"
-    with open('description.txt') as description_file:
+    with open('./commonplace/description.txt') as description_file:
         description = description_file.readlines()
     game = PoemGame(name, description, game_map, game_player)
     game.play_game()
