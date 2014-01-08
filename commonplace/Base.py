@@ -49,10 +49,8 @@ def bumped_range(stop):
     "Range for non computer scientists (aka for prompting)."
     return range(1, stop+1)
 
-def assert_with_dump(*args, **kwargs):
+def assert_with_dump(*args, callback=eq):
     "Passes the arguments to the keyword arg callback. Prints args if not true."
-    callback = kwargs.get('callback', eq)
-
     try:
         assert callback(*args)
     except AssertionError:
