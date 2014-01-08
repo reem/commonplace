@@ -3,8 +3,9 @@ Jonathan Reem
 Implements a very basic template for eliminating boilerplate code elsewhere
 """
 
-__all__ = ["BaseObj", "format_objects"]
 # pylint: disable=R0903
+
+from operator import eq
 
 class BaseObj(object):
     """
@@ -47,3 +48,14 @@ def spaced_print(string, pre=True, post=True):
 def bumped_range(stop):
     "Range for non computer scientists (aka for prompting)."
     return range(1, stop+1)
+
+def assert_with_dump(*args, **kwargs):
+    "Passes the arguments to the keyword arg callback. Prints args if not true."
+    callback = kwargs.get('callback', eq)
+
+    try:
+        assert callback(*args)
+    except AssertionError:
+        for arg in args:
+            print arg
+        raise
