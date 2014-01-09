@@ -229,7 +229,8 @@ MAP = MapTemplate(
             "The channel ends in a split, you can go north or south. "
             "Each direction looks starkly different.",
             {SOUTH: 21,
-             NORTH: 18},
+             NORTH: 18,
+             NORTHWEST: 16},
             3, CAT4,
             has_monster=False
         ),
