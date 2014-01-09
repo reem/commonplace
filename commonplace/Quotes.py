@@ -6,6 +6,7 @@ Extracts and exports Quotes
 """
 
 from random import shuffle
+from re import escape
 # pylint: disable=R0903, R0913
 
 
@@ -83,7 +84,7 @@ def read_quotes(quote_filename):
 
         quote_text = ''
         while raw_quotes[line_num] != 'Author:\n':
-            quote_text += raw_quotes[line_num]
+            quote_text += escape(raw_quotes[line_num])
             line_num += 1
 
         # Ensure that we haven't reached the end of the file or something.
