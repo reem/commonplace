@@ -91,9 +91,10 @@ def create_items_from_file(item_filename):
         assert raw_items[line_num] == 'Description:\n'
 
         line_num += 1  # Advance to Description text.
-        description = raw_items[line_num].strip()
+        description = ''
+        while raw_items[line_num] != 'Category:\n':
+            description += raw_items[line_num].strip()
 
-        line_num += 1  # Advance to Category:\n
         assert raw_items[line_num] == 'Category:\n'
 
         line_num += 1  # Advance to Category text
