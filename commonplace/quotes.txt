@@ -1,6 +1,9 @@
 Categories:
-    Category1
-    Category2
+    DPCW
+    SCW
+    CSSM
+    TPW
+    IE
 
 Quotes:
 
@@ -12,26 +15,703 @@ Author
 Category:
 Category1
 
+1
+Text:
+Religion and Gay Marriage.
+Author:
+Vlogbrothers (John) - http://www.youtube.com/watch?v=uQw0eLzfGNI
+Category:
+DPCW
+
 2
 Text:
-Other Text Text
+John Green is an IDIOT! And so are you.
 Author:
-Author2
+Vlogbrothers (Hank) - http://www.youtube.com/watch?v=fLkdFCK0rg8
 Category:
-Category2
+DPCW
 
 3
 Text:
-Separate Text
+It’s worth questioning whether the circular investment dynamic actually works.
+Can that really be self-sustaining? Can things work out when no one is thinking
+of substantive things to do or adding new ideas into the system? The era of
+indefinite optimism is arguably coming to an end. Look at government bonds,
+which are essentially the purest version of money. Yields keep going down.
+People keep holding because they don’t know what else to do. Today you can earn
+1.8% on a government bond. But expected inflation is 2.1%. The expected return
+over the next decade is -0.3%. You get negative returns when people run out of
+ideas.
+Indeterminacy has reoriented people’s ideas about investing. Whereas before
+investors actually had ideas, today they focus on managing risk. Very rarely in
+the hedge fund world do people ask questions about what’s going to happen in
+the future. It’s less, “What should we do?” and more, “How do we manage risk?
+Yet again, process trumps substance.
 Author:
-Author3
+Peter Thiel, Class 13, CS183
 Category:
-Category1
+DPCW
 
 4
 Text:
-Fourth Test
+Miami, as we know it today, is doomed," says Harold Wanless, the chairman of the
+department of geological sciences at the University of Miami. "It's not a
+question of if. It's a question of when.""
 Author:
-Author4
+Jeff Goodell - http://www.rollingstone.com/politics/news/why-the-city-of-miami-is-doomed-to-drown-20130620
 Category:
-Category2
+DPCW
+
+5
+Text:
+Anti-science activism and statistics-illiterate fear-mongering are killing
+millions of people. It's shocking and horrifying to realize how many
+completely-preventable deaths happen every year due to unnecessary fear of
+20th-century inventions. Sometimes, the legitimate science in favor of a
+beneficial technology is so crushingly overwhelming that I have to call
+opposition to it tantamount to mass murder.
+
+I feel very strongly about this. Well-intentioned activists and media
+fear-mongering are making large swathes of the public into unwitting
+participants in a vast global calamity of scientific-illiteracy. It is outright
+killing millions of people.
+Author:
+Ryan Carlyle - http://qr.ae/Ilkzv
+Category:
+DPCW
+
+6
+Text:
+Anybody who claims that anyone can live on minimum either hasn't made it in
+years, has never earned it or simply doesn't know what they are talking about.
+Author:
+Jon Mixon - http://qr.ae/I0hrY
+Category:
+DPCW
+
+7
+Text:
+There's a really easy way to ensure that more people do X, and fewer people do
+Y. You pay the people that do X more.
+Author:
+Jeremy Miles - http://qr.ae/I0hsk
+Category:
+DPCW
+
+8
+Text:
+If you said to me, go and design a Diabetes store, I would just take you to the
+supermarket.
+Author:
+Nick Crocker - https://medium.com/health-the-future/918b3d08f21f
+Category:
+DPCW
+
+9
+Text:
+Too many people spend money they haven't earned, to buy things they don't want,
+to impress people they don't like.
+Author:
+Dave Ramsey
+Category:
+DPCW
+
+10
+Text:
+This is your life and it's ending one minute at a time.
+Author:
+Fight Club
+Category:
+DPCW
+
+11
+Text:
+You're not your job. You're not how much money you have in the bank. You're not
+the car you drive. You're not the contents of your wallet. You're not your
+fucking khakis. You're the all-singing, all-dancing crap of the world.
+Author:
+Fight Club
+Category:
+DPCW
+
+12
+Text:
+Nuclear reactors don't detonate like nuclear bombs. They absolutely cannot
+detonate -- getting a nuclear payload to explode as a bomb is actually quite
+difficult even when you're trying to make a bomb.
+Author:
+Ryan Carlyle - http://qr.ae/Ilkzv
+Category:
+DPCW
+
+13
+Text:
+Whenever you feel like criticizing any one," he told me, "just remember that
+all the people in this world haven’t had the advantages that you’ve had.
+Author:
+The Great Gatsby
+Category:
+DPCW
+
+14
+Text:
+“We stop being afraid of the monster’s under our bed when we realize they are
+inside of us.”
+Author:
+The Joker - The Dark Knight
+Category:
+DPCW
+
+15
+Text:
+"When you grow up you tend to get told the world is the way it is and
+your life is just to live your life inside the world. Try not to bash into
+the walls too much. Try to have a nice family, have fun, save a little money.
+That's a very limited life. Life can be much broader once you discover one
+simple fact: Everything around you that you call life was made up by people
+that were no smarter than you and you can change it, you can influence it, you
+can build your own things that other people can use.
+Once you learn that, you'll never be the same again."
+Author:
+Steve Jobs
+Category:
+SCW
+
+16
+Text:
+Always worry about the exponent. The rate at which you grow. Every minute
+should be spent pushing the rate higher.
+Author:
+Anonymous
+Category:
+SCW
+
+17
+Text:
+ALL THAT PORN ISN'T HELPING YOU.
+Productivity porn, that is. How to get more hours from your day. What to-do app
+to use. What cute quote to share on Facebook. Waste. Of. Time.
+It's actually quite simple. The most accomplished people are simply experts at
+what they choose to do, not how they do it. Spend most of your time on the
+right things and the rest takes care of itself.
+Author:
+Oliver Emberton - http://qr.ae/pUFgp
+Category:
+SCW
+
+18
+Text:
+But we don’t eat our games in 2013. We control caricatures in a universe
+limited only by a developer’s budget—Rockstar Games allocated around a
+quarter-billion dollars for GTA V, which makes it the most expensive game ever
+produced. That’s wild, but what’s truly bonkers is that around half of that
+went to marketing, leaving the programmers with a mere fraction of a typical
+Hollywood budget to build a high-functioning alternate reality: an abridged
+city that contains enough recognizable buildings, neighborhoods, and freeways
+to make it feel unmistakably Angeleno.
+Author:
+Trent Wolbe - http://www.theverge.com/2013/10/7/4787712/to-live-and-die-in-los-santos-a-gta-v-travelogue
+Category:
+SCW
+
+19
+Text:
+The chair shop across the street also makes a chair. These guys select OK
+materials, they make a seat, some legs, a back. It’s definitely a chair! Then
+they hire a chair designer and say, “Make this a comfortable chair!” The
+designer adds a sad cushion to the seat. The chair bombs. Everyone dies of
+dysentery.
+Author:
+Mike Monteiro - https://medium.com/editors-picks/cc6de87e61b8
+Category:
+SCW
+
+20
+Text:
+The same thing will happen if you're running a startup, of course. If you do
+everything the way the average startup does it, you should expect average
+performance. The problem here is, average performance means that you'll go out
+of business. The survival rate for startups is way less than fifty percent. So
+if you're running a startup, you had better be doing something odd. If not,
+you're in trouble.
+Author:
+Paul Graham - http://www.paulgraham.com/avg.html
+Category:
+SCW
+
+21
+Text:
+I will tell you this (and I'm paraphrasing a much wiser person), if the
+space-time is a lottery and we all were gonna end up in some place at some time
+in the history of humanity, then I won the jackpot.  Think about it.  Think
+about all the times and places I could have ended up, and I ended up here.
+Author:
+Dan Holliday - http://qr.ae/NjmQ3
+Category:
+SCW
+
+22
+Text:
+I can transform Oxygen to Carbon Dioxide
+Author:
+Chung Vo - http://qr.ae/hpRmK
+Category:
+SCW
+
+23
+Text:
+The world is more addictive than it was 40 years ago. And unless the forms of
+technological progress that produced these things are subject to different laws
+than technological progress in general, the world will get more addictive in
+the next 40 years than it did in the last 40.
+Author:
+Paul Graham - http://www.paulgraham.com/addiction.html
+Category:
+SCW
+
+24
+Text:
+Own your life or someone else will.
+Author:
+Unknown
+Category:
+SCW
+
+25
+Text:
+The problem is not the problem. Your attitude about the problem is the problem.
+Author:
+Captain Jack Sparrow - Pirate of the Caribbean
+Category:
+SCW
+
+26
+Text:
+In the long run, understanding is always more important than getting things
+done.  Why? Because if you get things done without understanding what you're
+doing, you're probably doing them wrong.
+Author:
+Daniel Mclaury - http://qr.ae/Iga8l
+Category:
+CSSM
+
+27
+Text:
+The name for that is Pedigree collapse. The further back you go, the more
+ancestors you have, but the more opportunities there are for them to be
+related. So, if any two of your great grandparents were second cousins, then
+instead of 64 distinct great-great-great-great-great grandparents you'd have
+62.
+The further back you go, the more overlaps there are, and the fewer distinct
+ancestors you have. You'd still have 2^N "slots", but more and more of them
+will be duplicates.
+Author:
+Joshua Engel - http://qr.ae/IiDxG
+Category:
+CSSM
+
+28
+Text:
+As long as our hypothetical Blub programmer is looking down the power
+continuum, he knows he's looking down. Languages less powerful than Blub are
+obviously less powerful, because they're missing some feature he's used to. But
+when our hypothetical Blub programmer looks in the other direction, up the
+power continuum, he doesn't realize he's looking up. What he sees are merely
+weird languages. He probably considers them about equivalent in power to Blub,
+but with all this other hairy stuff thrown in as well. Blub is good enough for
+him, because he thinks in Blub.
+Author:
+Paul Graham - http://www.paulgraham.com/avg.html
+Category:
+CSSM
+
+29
+Text:
+Lemme repeat that. By abstracting away the very concept of looping, you can
+implement looping any way you want, including implementing it in a way that
+scales nicely with extra hardware.
+Author:
+Joel Spolsky - http://www.joelonsoftware.com/items/2006/08/01.html
+Category:
+CSSM
+
+30
+Text:
+The Law of Leaky Abstractions: All non-trivial abstractions, to some degree,
+are leaky.
+
+Abstractions fail. Sometimes a little, sometimes a lot. There's leakage. Things
+go wrong. It happens all over the place when you have abstractions.
+Author:
+Joel Spolsky - http://www.joelonsoftware.com/articles/LeakyAbstractions.html
+Category:
+CSSM
+
+31
+Text:
+So when trying to think of a recursive way to solve a problem, try to think of
+when a recursive solution doesn't apply and see if you can use that as an edge
+case, think about identities and think about whether you'll break apart the
+parameters of the function (for instance, lists are usually broken into a head
+and a tail via pattern matching) and on which part you'll use the recursive
+call.
+Author:
+Learn You a Haskell - http://learnyouahaskell.com/recursion#thinking-recursively
+Category:
+CSSM
+
+32
+Text:
+We'll also take a look at monoids, which are sort of like socks.
+Author:
+Learn You a Haskell - http://learnyouahaskell.com/functors-applicative-functors-and-monoids
+Category:
+CSSM
+
+33
+Text:
+For now, let's examine how you would get the first 24 multiples of 13. Sure,
+you could do [13,26..24*13]. But there's a better way: take 24 [13,26..].
+Because Haskell is lazy, it won't try to evaluate the infinite list immediately
+because it would never finish. It'll wait to see what you want to get out of
+that infinite lists. And here it sees you just want the first 24 elements and
+it gladly obliges.
+Author:
+Learn You a Haskell - http://learnyouahaskell.com/starting-out
+Category:
+CSSM
+
+34
+Text:
+I don't know of any other discipline that makes you feel so much like a wizard.
+Even engineering doesn't really feel that way, because you actually have to do
+real work fitting things together and what not.
+In contrast, when you program something, you're basically just muttering
+incantations and casting spells. Do it right, and incredible stuff just springs
+to life.
+Author:
+Nadeem Mohsin - http://qr.ae/NKoh5
+Category:
+CSSM
+
+35
+Text:
+Any sufficiently advanced work is indistinguishable from play.
+Author:
+Seb Paquet - http://qr.ae/NKolK
+Category:
+CSSM
+
+36
+Text:
+Your First Time Wasn’t Gentle
+
+I learned to code when I was 7, fiddling on my grandfather’s computer on long,
+boring suburban summers. I learned BASIC, made a ball dance on screen. I
+learned Pascal and wrote a program to play back music on the PC speaker. I
+learned C around age 10, but hit a pretty big wall there that I dodged around
+until high school: pointers. Even ignoring those damnable pointers, I worked
+and read and studied and practiced and failed a whole lot. I deleted my
+grandfather’s hard drive twice (once by accident), and ended up reinstalling my
+OS more than a few times. I failed, over and over.
+
+Maybe your story is similar, maybe it’s wildly different. But I think nearly
+everyone who learned to program can relate to the difficulty of the process.
+And then, after learning the basics, we again encounter well-known conceptual
+thresholds like “pointers.” Many computer science professors describe pointers
+as a kind of filter in their curricula. If you are going to be a good
+programmer, you must be able to understand pointers. And the people who easily
+learn them are few and far in between. Most people, myself included, needed
+practice and examples to understand what pointers were and why they were
+important.
+
+This nearly universal struggle isn’t a coincidence. Pointers are a very
+powerful and fundamental abstraction. Learning them makes you a better
+programmer by helping you think more symbolically. Even if you work in a
+language that doesn’t offer you pointers, pointer-like structures and concepts
+abound in the wild.
+Author:
+Dave Fayram - http://dave.fayr.am/posts/2011-08-19-lets-go-shopping.html
+Category:
+CSSM
+
+37
+Text:
+That said, most people are totally unprepared when they first meet up with
+Haskell or Ocaml. Heck, in Haskell even the semicolons are different. This
+isn’t just an issue of syntax; Haskell and MLs are actually based on
+fundamentally different abstractions and a whole new language of patterns. You
+build apps differently, you structure them differently, and you extend them
+differently.
+Author:
+Dave Fayram - http://dave.fayr.am/posts/2011-08-19-lets-go-shopping.html
+Category:
+CSSM
+
+38
+Text:
+Haskell lets you write functions that control other functions, and then you can
+write function that, you guessed it, control those functions. By the time you
+are even two levels deep, you've invented map-reduce - which is powerful enough
+to power Google, and which you should, coincidentally, Google.
+Author:
+Myself - http://qr.ae/NjMlb
+Category:
+CSSM
+
+39
+Text:
+Lisp is worth learning for the profound enlightenment experience you will have
+when you finally get it; that experience will make you a better programmer for
+the rest of your days, even if you never actually use Lisp itself a lot.
+Author:
+Paul Grahan - http://www.paulgraham.com/avg.html
+Category:
+CSSM
+
+40
+Text:
+You’re trying to predict the behavior of <complicated system>? Just model it as
+a <simple object>, and then add some secondary terms to account for
+<complications I just thought of>. Easy, right? So, why does <your field> need
+a whole journal, anyway?
+
+Liberal-Arts major may be annoying sometimes, but there’s nothing more
+obnoxious than a physicist first encountering a new subject.
+Author:
+Randall Monroe, XKCD - http://xkcd.com/793/
+Category:
+CSSM
+
+41
+Text:
+Normally I just define "odd" to mean "not even.”"
+Author:
+Daniel Mclaury - http://qr.ae/NjlaR
+Category:
+CSSM
+
+42
+Text:
+Many would suggest that a mathematical genius tends to think more like an
+average child and less like an average adult.
+Author:
+Daniel Mclaury - http://qr.ae/NjlZj
+Category:
+CSSM
+
+43
+Text:
+The sky above the port
+was the color of television,
+tuned to a dead channel.
+Author:
+William Gibson - Neuromancer
+Category:
+TPW
+
+44
+Text:
+In three words I can sum up everything I've learned about life. It goes on..
+Author:
+Robert Frost
+Category:
+TPW
+
+45
+Text:
+A witty saying proves nothing
+Author:
+Voltaire
+Category:
+TPW
+
+46
+Text:
+Find what you love and let it kill you.
+Author:
+Charles Bukowski
+Category:
+TPW
+
+47
+Text:
+They carried all they could bear, and then some, including a silent awe for the
+terrible power of the things they carried.
+Author:
+Tim O'Brien - The Things They Carried
+Category:
+TPW
+
+48
+Text:
+Courage, I seemed to think, comes to us in finite quantities, like an
+inheritance, and by being frugal and stashing it away and letting it earn
+interest, we steadily increase our moral capital in preparation for that day
+when the account must be drawn down. It was a comforting theory. It dispensed
+with all those bothersome little acts of daily courage; it offered hope and
+grace to the repetitive coward; it justified the past while amortizing the
+future.
+Author:
+Tim O'Brien - The Things They Carried
+Category:
+TPW
+
+49
+Text:
+The Time you have in Jellybeans
+Author:
+Ze Frank - http://www.youtube.com/watch?v=BOksW_NabEk
+Category:
+TPW
+
+50
+Text:
+Crushing Words
+Author:
+Ze Frank - http://www.youtube.com/watch?v=xJ9e32MNEOk
+Category:
+TPW
+
+51
+Text:
+An Invocation for Beginnings
+Author:
+Ze Frank - http://www.youtube.com/watch?v=RYlCVwxoL_g
+Category:
+TPW
+
+52
+Text:
+Trying to defeat an ideology by killing individuals is like trying to save a
+marriage with a blowjob. It might buy you some time, but in the end it'll just
+suck.
+Author:
+Ze Frank
+Category:
+TPW
+
+53
+Text:
+Sticks and stones may break my bones but words leave psychological scars that
+never heal.
+Author:
+Unknown
+Category:
+TPW
+
+54
+Text:
+if
+Author:
+The Spartans
+Category:
+TPW
+
+55
+Text:
+With sufficient metaphorization, you can make it work. But then, you can make
+any book work if you're willing to abstract it far enough that it's
+meaningless. So you might as well conclude that Twilight: Breaking Dawn
+"provides truth" in exactly the same sense.
+Author:
+Joshua Engel - http://qr.ae/IJdXq
+Category:
+IE
+
+56
+Text:
+You don't.  You go right ahead and "force your cultural views on other people."
+We've arrived into some weird bizarro point in human space-time where we're
+knee-jerking against ages of our ancestors forcing their ideals on others and
+the exact opposite -- the fear of making a rational cultural judgment -- is
+causing a great deal of harm as well.
+
+I know people love to operate from some perceived absolutist position (i.e. "we
+shouldn't judge" or "God has determined the nature of morality"), but the truth
+is, we're either our own salvation or our own annihilator.  It's always been up
+to us.  It's always fallen to those with solid common sense to say, "Let's just
+wait a second and evaluate this a little more thoroughly."
+
+And the truth is, there is no fixed rule.  There is no position of permanence
+or static comfort from which we get to say, "This is here, forever, it will
+never change.  We no longer have to evaluate it."  That is the recourse of
+simple, lazy minds.  We get no such comfort in our universe.  And even if there
+were "fixed" rules--based on what "God says"--it's not like they've been any
+help anyway.  Religion and unbending rules have always been broken and--worse
+still--exploited by those with enough intelligence to use the immovability of
+society's norms as a hiding place for their nefarious plans.
+
+How easy would it be to just relax and say, "Nope.  Don't have to think/worry
+about that anymore.  God says 'no'!  The rules say, 'can't happen'."  So, like
+with everything in the universe, this subject requires a bit of rational
+thought.  And the rational thought may be:  we don't have to fret about making
+judgments, one is called for in this case and we shouldn't be afraid of it or
+afraid to shout it wherever we go.
+
+It's wrong.  People who do it are wrong.
+Author:
+Dan Holliday - http://qr.ae/pEyPx
+Category:
+IE
+
+57
+Text:
+I think that you have science mixed up with Sophism. Science's job description
+doesn't call for being able to defend any position you hand it. That's for
+lawyers. Science's job description calls for being able to distinguish real
+things from false things, as measured against the unblinking jurisprudence of
+reality. The only "argument" science favors is physical evidence.
+For which there is, effectively, none in favor of reincarnation. The only
+pieces of evidence offered for reincarnation are anecdotes:
+impossible-to-verify stories that always evaporate whenever they do present the
+kinds of information that could be verifiable. Cf Bridey Murphy.
+Science isn't about arguing for it. It's about coming up with evidence. If one
+wanted to scientifically demonstrate reincarnation, one would presumably follow
+up every story and try to find one that isn't a hoax, wishful thinking, or
+self-delusion. You'd work very hard to disprove each story, and it's only when
+you found a number of stories that you couldn't disprove, then you'd have
+something. The more confirmable details, the better. And you have to try very
+hard to confirm all of the details, because when somebody else manages to
+disprove one, you'll have a very hard time getting anybody to pay attention to
+you ever again.
+Science doesn't, in fact, always live up to its ideal of
+hypothesis-test-reevaluate. Scientists have limited time, money, and attention,
+and so they focus their efforts on things that seem most productive. That means
+that extraordinary claims require extraordinary proofs: so many of
+reincarnation stories have proven to be false that you're going to have to put
+together an airtight case with tremendous details in order to get anybody to
+spend their own time and resources checking your work out.
+Author:
+Joshua Engel - http://qr.ae/hp1fv
+Category:
+IE
+
+58
+Text:
+Anti-intellectualism has been a constant thread winding its way through our
+political and cultural life, nurtured by the false notion that democracy means
+that 'my ignorance is just as good as your knowledge.'
+Author:
+Isaac Asimov
+Category:
+IE
+
+59
+Text:
+This theory is stupid, but hey, hardly the dumbest thing I've given in this
+answer so far. When you've got a holy, infallible text in which you're
+permitted to read anything you like into the massive gaps, you can make up
+theories ad infinitum without fear of contradiction or learning anything.
+Author:
+Joshua Engel - http://qr.ae/IyrhR
+Category:
+IE
+
+60
+Text:
+Do You Believe in God?
+Author:
+Vlogbrothers (Hank) - http://www.youtube.com/watch?v=EfKolpFOZLk
+Category:
+IE
