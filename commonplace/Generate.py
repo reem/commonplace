@@ -69,6 +69,7 @@ def generate_room(room_template):
         monster = [generate_monster(randint(1, 3),
                                    room_template.category,
                                    room_template.difficulty)]
+        Monster.BrainMonster.set_difficulty(1)
 
     if room_template.quote is None:
         try:
