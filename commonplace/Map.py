@@ -10,7 +10,7 @@ from operator import contains
 # pylint: disable=R0903, R0913, C0301
 from commonplace.Quotes import CATEGORIES, QUOTES, Quote
 from commonplace.Base import assert_with_dump
-from commonplace.Rooms import PoemRoom, BrainRoom
+from commonplace.Rooms import PoemRoom
 from commonplace.Poems import POEMS
 from commonplace.Items import BrainEquipment
 from commonplace.Monster import BrainMonster
@@ -52,7 +52,7 @@ class RoomTemplate(object):
         for direction in doors:
             assert_with_dump(DIRECTIONS, direction,
                              callback=contains)
-            assert_with_dump(range(28), doors[direction],
+            assert_with_dump(range(27), doors[direction],
                              callback=contains)
 
         self.doors = doors              # {direction: RoomTemplate INDEX}
@@ -160,7 +160,7 @@ MAP = MapTemplate(
             "appears world changing.",
             {SOUTH: 7,
              SOUTHWEST: 9},
-            2, CAT3
+            3, CAT3
         ),
         RoomTemplate(
             "New Territory",
@@ -174,7 +174,7 @@ MAP = MapTemplate(
             "Hall of Worlds",
             "This is clearly a transaction hub. The remains of great work "
             "still lay here.",
-            {NORTH: 27,
+            {NORTH: 11,
              NORTHEAST: 12,
              SOUTH: 9},
             4, CAT3
@@ -182,7 +182,7 @@ MAP = MapTemplate(
         RoomTemplate(
             "Throne",
             "",
-            {SOUTH: 27},
+            {SOUTH: 10},
             4, CAT3
         ),
         RoomTemplate(
@@ -212,8 +212,14 @@ MAP = MapTemplate(
         ),
         RoomTemplate(
             "Channel",
-            "There is a long straight path here. Shadows are behind every "
-            "corner.",
+            "There is a long straight path starting here. Shadows are everywhere.",
+            {SOUTH: 14,
+             SOUTHEAST: 16},
+            2, CAT4
+        ),
+        RoomTemplate(
+            "Channel",
+            "The path continues.",
             {NORTHWEST: 15,
              SOUTHEAST: 17},
             3, CAT4
@@ -285,14 +291,6 @@ MAP = MapTemplate(
             {},
             5, CAT1
         ),
-        RoomTemplate(
-            "World Room",
-            "There is a large globe in the center of the room. "
-            "It appears that this room is used for observation.",
-            {NORTH: 11,
-             SOUTH: 10},
-            4, CAT3
-        )
     ],
     0)
 
