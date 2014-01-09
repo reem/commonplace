@@ -32,8 +32,8 @@ class BasePlayer(BaseObj):
 
     def attribute_bonus(self, attribute):
         "Gets the bonus from equipment to a specific stat."
-        return sum([equipment.stats[attribute]
-                    for _, equipment in self.equipped])
+        return sum([equipment.stats[attribute] if equipment is not None else 0
+                    for equipment in self.equipped.values()])
 
     @property
     def health(self):
