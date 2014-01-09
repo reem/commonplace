@@ -209,6 +209,9 @@ class PoemGame(BaseObj):
                     fight(self.player, self.current_room.guardian,
                           monster_name='guardian', can_run=False)
                 except MonsterDeadException:
+                    if self.current_room.guardian.monster_type == 'FinalBoss':
+                        raise FinalBossDeadException
+
                     spaced_print("The guardian dropped {}!".format(
                         self.current_room.guardian.drop))
                     self.player.inventory.append(
