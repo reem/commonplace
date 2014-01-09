@@ -504,7 +504,7 @@ TPW
 
 44
 Text:
-In three words I can sum up everything I've learned about life. It goes on..
+In three words I can sum up everything I've learned about life. It goes on.
 Author:
 Robert Frost
 Category:
