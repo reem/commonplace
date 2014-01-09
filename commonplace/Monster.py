@@ -52,7 +52,7 @@ class BaseMonster(BaseObj):
 
 class BrainMonster(BaseMonster):
     "Implements monsters with quotes and multiple custom constructors.."
-    _general_difficulty = 0.75
+    _general_difficulty = 1.25
     __difficulty = 1
 
     def __init__(self, name, description, start_health, attack, drop,
