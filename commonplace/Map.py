@@ -83,7 +83,7 @@ MAP = MapTemplate(
     "that the shadows have taken.",
     [
         RoomTemplate(
-            "Entrance Segment",
+            "The Entrance Segment",
             "It's dark and squishy everywhere. You've managed to enter but"
             " don't know where you are.",
             {NORTH: 1},
@@ -112,8 +112,8 @@ MAP = MapTemplate(
             1, CAT2
         ),
         RoomTemplate(
-            "Hall ",
-            "",
+            "Hall of the Elite",
+            "The walls are plated gold.",
             {NORTH: 4,
              SOUTHEAST: 2},
             2, CAT2
