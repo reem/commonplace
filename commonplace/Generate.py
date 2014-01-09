@@ -14,9 +14,17 @@ import commonplace.Places as Places
 from random import randint
 from commonplace.Quotes import QUOTES
 from commonplace.ItemList import ITEMS
-from commonplace.Map import MAP, THRONE_ROOMS, SUMMER_WINTER_SET
+from commonplace.Map import (MAP, THRONE_ROOMS, SUMMER_WINTER_SET,
+                             CAT1, CAT2, CAT3, CAT4, CAT5)
 # pylint: disable=R0903, R0913, C0301
 
+QUOTES_GENERATED = {
+    CAT1: 0,
+    CAT2: 0,
+    CAT3: 0,
+    CAT4: 0,
+    CAT5: 0
+}
 
 def generate_all():
     "Generates a player and map."
@@ -62,7 +70,13 @@ def generate_room(room_template):
                                    room_template.category)
 
     if room_template.quote is None:
-        quote = QUOTES[room_template.category].pop()
+        try:
+            quote = QUOTES[room_template.category].pop()
+            QUOTES_GENERATED[room_template.category] += 1
+        except IndexError:
+            print room_template.category
+            print QUOTES_GENERATED[room_template.category]
+            raise
     else:
         quote = room_template.quote
 
@@ -92,12 +106,21 @@ def generate_map():
 
 def generate_item(category, strength):
     "Generates an item appropriate for a category and strength."
-    item_template = ITEMS[category][strength].pop()
+    try:
+        item_template = ITEMS[category][strength].pop()
+    except IndexError:
+        print category, strength
+        raise
 
     if item_template.name == "Sword of Invincible Summer":
         return SUMMER_WINTER_SET.sword
 
-    quote = QUOTES[category].pop()
+    try:
+        quote = QUOTES[category].pop()
+        QUOTES_GENERATED[category] += 1
+    except IndexError:
+        print category
+        print QUOTES_GENERATED[category]
     health, attack = stats_from_template(item_template)
     stats = {'health': health, 'attack': attack}
     return Items.BrainEquipment(item_template.name, item_template.description,
@@ -172,8 +195,14 @@ def generate_monster(strength, category):
         3: Monster.BrainMonster.shadow_gargantuan,
     }
 
-    quote = QUOTES[category].pop()
-    drop = generate_item(category, strength)
+    try:
+        quote = QUOTES[category].pop()
+        QUOTES_GENERATED[category] += 1
+    except IndexError:
+        print category
+        print QUOTES_GENERATED[category]
+
+    drop = generate_item(category, Monster.BrainMonster.read_difficulty())
 
     name, description = MONSTER_LOOKUP[strength]
 
