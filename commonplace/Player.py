@@ -12,7 +12,7 @@ from commonplace.Exceptions import PlayerDeadException
 
 DEF_EQUIP_SLOTS = {'helmet': None,
                    'armor': None,
-                   'weapon': None,
+                   'sword': None,
                    'shield': None,
                    'ring': None}
 
@@ -76,6 +76,7 @@ class BasePlayer(BaseObj):
             raise ValueError("Tried to equip to the wrong kind of slot.")
 
         self.equipped[slot] = equipment
+        self.health = self.health  # Don't allow health to go over max.
 
     def pretty_format(self, attribute):
         "Pretty format for an attribute."
