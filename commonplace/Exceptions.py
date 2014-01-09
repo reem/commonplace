@@ -24,8 +24,7 @@ class GameException(Exception):
     format_list. This gives maximal control to the end user while
     providing bundled defaulting for GameExceptions.
     """
-    def __init__(self, format_list, message=""):
-        super(GameException, self).__init__(message.format(*format_list))
+    pass
 
 
 class BaseVictoryException(GameException):
@@ -45,31 +44,24 @@ class BaseDefeatException(GameException):
 class PlayerDeadException(BaseDefeatException):
     """Exception raised when the Player dies to let the Game know
     for appropriate termination."""
-    def __init__(self, format_list, message="You were killed by {}!"):
-        super(PlayerDeadException, self).__init__(format_list, message)
+    pass
 
 
 class EnemyVictoryException(BaseDefeatException):
     """Exception raised for not defeating the enemy in time or allowing
     other enemy victory conditions to come to pass."""
-    def __init__(self, format_list,
-                 message="{}'s plans came to fruition. Your cause is lost."):
-        super(EnemyVictoryException, self).__init__(format_list, message)
+    pass
 
 
 class FinalBossDeadException(BaseVictoryException):
     """Exception raised when you kill the Final Boss. Causes Victory."""
-    def __init__(self, format_list,
-                 message="You killed the final boss, {}!"):
-        super(FinalBossDeadException, self).__init__(format_list, message)
+    pass
 
 
 class AltWinException(BaseVictoryException):
     """Victory Exception raised when the player wins by an alternate means.
     Defaults to Collecting all of some object."""
-    def __init__(self, format_list,
-                 message="You collected all the {}!"):
-        super(AltWinException, self).__init__(format_list, message)
+    pass
 
 
 class UnhandledOptionError(Exception):
