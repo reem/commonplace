@@ -93,10 +93,9 @@ class BrainPlayer(BasePlayer):
 
     def full_info(self):
         "Format everything."
-        return "{}, {}\n{}\n{}\n{}".format(self.name, self.description,
-                                               self.format_stats(),
-                                               format_objects(self.inventory),
-                                               format_objects(self.equipped))
+        return "{}, {}\n{}\nInventory:\n{}\nEquipped:\n{}".format(
+            self.name, self.description, self.format_stats(),
+            format_objects(self.inventory), format_objects(self.equipped))
 
     def format_stats(self):
         "Formatting stats for information purposes."
