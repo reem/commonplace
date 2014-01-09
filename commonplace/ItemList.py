@@ -94,6 +94,7 @@ def create_items_from_file(item_filename):
         description = ''
         while raw_items[line_num] != 'Category:\n':
             description += raw_items[line_num].strip() + ' '
+            line_num += 1
 
         assert raw_items[line_num] == 'Category:\n'
 
