@@ -18,7 +18,7 @@ class Quote(object):
 
     def __str__(self):
         "Translating from a Quote object to a string. Loses category."
-        return "{0.text}\n    -- {0.author}".format(self)
+        return "\"{0.text}\"\n    -- {0.author}".format(self)
 
 
 def read_quotes(quote_filename):
