@@ -5,6 +5,7 @@ January 2014
 Extracts and exports Quotes
 """
 
+from random import shuffle
 # pylint: disable=R0903, R0913
 
 
@@ -104,3 +105,6 @@ def read_quotes(quote_filename):
 
 QUOTE_FILE = './commonplace/quotes.txt'
 CATEGORIES, QUOTES = read_quotes(QUOTE_FILE)
+
+# Little hack to shuffle up QUOTES.
+_ = [shuffle(x) for x in QUOTES.values()]
