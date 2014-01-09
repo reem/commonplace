@@ -45,10 +45,10 @@ class PoemGame(BaseObj):
 
     def play_game(self):
         "Plays the entire game."
-        print "Welcome to the game of {0.name}.\n{0.description}\n".format(
+        print "Welcome to the game of {0.name}.\n\n{0.description}\n".format(
             self)
-        print "You are {0.name}, {0.description}".format(self.player)
-        print "You begin your adventure in {0.name}.".format(self.current_room)
+        spaced_print("You begin your adventure in {0.name}.".format(
+            self.current_room))
 
         while True:
             try:
