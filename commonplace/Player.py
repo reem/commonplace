@@ -53,7 +53,7 @@ class BasePlayer(BaseObj):
         elif value >= self.max_health:
             self._health = self.max_health
         else:
-            self._health = value
+            self._health = int(value)
 
     @property
     def attack(self):

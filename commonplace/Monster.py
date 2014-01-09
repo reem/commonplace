@@ -31,7 +31,7 @@ class BaseMonster(BaseObj):
         if value <= 0:
             raise MonsterDeadException(str(self))
         else:
-            self._health = value
+            self._health = int(value)
 
     def maximize_health(self):
         "Sets the monsters health to maximum in case of run."
