@@ -45,12 +45,20 @@ def generate_room(room_template):
     NOTE: You need to run fix_doors on the list of rooms after
     generating them or the doors will not work properly.
     """
+    difficulty_lookup = {
+        1: 1,
+        2: 2,
+        3: 4,
+        4: 8
+    }
 
     if room_template.name == "Hall":
         return generate_hall(room_template)
     elif room_template.name == "Throne":
         return generate_throne(room_template)
 
+    Monster.BrainMonster.set_difficulty(
+        difficulty_lookup[room_template.difficulty])
     monster = generate_monster(next(MONSTERS),
                                room_template.category)
 
