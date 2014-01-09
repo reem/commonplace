@@ -94,9 +94,9 @@ def fix_doors(rooms):
         for direction in room.doors:
             try:
                 room.doors[direction] = rooms[room.doors[direction]]
-            except IndexError as e:
+            except IndexError:
                 print room.doors[direction]
-                raise e
+                raise
     return rooms
 
 def generate_map():
