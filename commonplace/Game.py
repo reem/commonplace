@@ -104,7 +104,7 @@ class PoemGame(BaseObj):
                 if item_choice == 'back':
                     continue
 
-                item_index = int(item_choice)
+                item_index = int(item_choice) - 1
                 current_item = self.current_room.items[item_index]
 
                 spaced_print(str(current_item))
@@ -129,15 +129,16 @@ class PoemGame(BaseObj):
                 elif player_choice == 'inventory':
                     spaced_print("Inventory:\n{}".format(format_objects(
                         self.player.inventory)))
-                    inventory_choice = prompt(
-                        bumped_range(len(self.player.inventory)) + ['back'])
+                    inventory_choice = prompt([str(i)
+                                               for i in bumped_range(
+                                                   len(self.player.inventory))
+                                               ] + ['back'])
 
                     if inventory_choice == 'back':
                         continue
 
-                    inventory_choice = int(inventory_choice)
-                    if inventory_choice in bumped_range(len(
-                            self.player.inventory)):
+                    inventory_choice = int(inventory_choice) - 1
+                    if inventory_choice in range(len(self.player.inventory)):
 
                         inventory_item = self.player.inventory[
                             inventory_choice]
@@ -150,7 +151,7 @@ class PoemGame(BaseObj):
                             elif item_choice == 'equip':
                                 assert_with_dump(self.player.equipped,
                                                  inventory_item.eq_type,
-                                                 contains)
+                                                 callback=contains)
                                 self.player.equip(inventory_item,
                                                   inventory_item.eq_type)
 
@@ -167,14 +168,16 @@ class PoemGame(BaseObj):
 
                 spaced_print("Monsters:\n{}".format(
                     format_objects(self.current_room.monsters)))
-                monster_choice = prompt(
-                    bumped_range(len(self.current_room.monsters)) + ['back'])
+                monster_choice = prompt([str(i)
+                                         for i in bumped_range(len(
+                                             self.current_room.monsters))] \
+                                        + ['back'])
 
                 if monster_choice == 'back':
                     continue
 
-                monster_index = int(monster_choice)
-                if monster_index in bumped_range(len(
+                monster_index = int(monster_choice) - 1
+                if monster_index in range(len(
                         self.current_room.monsters)):
 
                     current_monster = self.current_room.monsters[monster_index]
@@ -187,7 +190,7 @@ class PoemGame(BaseObj):
                         try:
                             fight(self.player, current_monster)
                         except MonsterDeadException:
-                            spaced_print("The monster dropped {}".format(
+                            spaced_print("The monster dropped:\n\n{}".format(
                                 current_monster.drop))
                             self.player.inventory.append(current_monster.drop)
                             del self.current_room.monsters[monster_index]
@@ -212,7 +215,7 @@ class PoemGame(BaseObj):
                     if self.current_room.guardian.monster_type == 'FinalBoss':
                         raise FinalBossDeadException
 
-                    spaced_print("The guardian dropped {}!".format(
+                    spaced_print("The guardian dropped:\n\n{}".format(
                         self.current_room.guardian.drop))
                     self.player.inventory.append(
                         self.current_room.guardian.drop)
@@ -235,10 +238,6 @@ class PoemGame(BaseObj):
                         self.current_room.treasure.name)
                     self.player.inventory.append(self.current_room.treasure)
                     self.current_room.treasure = None
-
-            # Should never happen. <-- Famous last words.
-            raise UnhandledOptionError(self, self.current_room, main_choice,
-                                       self.current_room.valid_options)
 
     def end_game_defeat(self, defeat_exception):
         "Takes a defeat exception and ends the game."
@@ -292,8 +291,8 @@ def fight(player, monster, monster_name='monster', can_run=True):
     while True:
         try:
             spaced_print("{}:\n{}".format(monster_name.capitalize(),
-                                          monster.format_stats))
-            spaced_print("You:\n{}".format(player.format_stats),
+                                          monster.format_stats()))
+            spaced_print("You:\n{}".format(player.format_stats()),
                          pre=False)
 
             if can_run:
@@ -319,10 +318,11 @@ def fight(player, monster, monster_name='monster', can_run=True):
                     player.health -= monster_damage
                 else:
                     spaced_print("The {} did {} damage!".format(
-                        monster_name, monster.damage), pre=False)
+                        monster_name, monster_damage))
                     player.health -= monster_damage
 
-                    spaced_print("You did {} damage!".format(player_damage))
+                    spaced_print("You did {} damage!".format(player_damage),
+                                 pre=False)
                     monster.health -= player_damage
 
             elif fight_choice == 'run':
