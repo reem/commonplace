@@ -116,7 +116,6 @@ class BrainMonster(BaseMonster):
 
     def full_info(self):
         "Full information for prompting."
-        return "{}\n{}\nHealth: {}\nAttack: {}".format(BaseObj.__str__(self),
-                                                       self.quote,
-                                                       self.health,
-                                                       self.attack)
+        return "{}\n\n{}\n\nHealth: {}\nAttack: {}".format(
+            BaseObj.__str__(self), self.quote, self.health,
+            self.attack)
