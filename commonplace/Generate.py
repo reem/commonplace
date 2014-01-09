@@ -93,9 +93,9 @@ def fix_doors(rooms):
         for direction in room.doors:
             try:
                 room.doors[direction] = rooms[room.doors[direction]]
-            except IndexError:
+            except IndexError as e:
                 print room.doors[direction]
-                raise
+                raise e
     return rooms
 
 def generate_map():
@@ -132,7 +132,7 @@ def generate_item(category, strength):
     stats = {'health': health, 'attack': attack}
     return Items.BrainEquipment(item_template.name, item_template.description,
                                 item_template.item_type.lower(),
-                                quote, stats)
+                                stats, quote)
 
 def stats_from_template(item_template):
     "Gets the correct stats for equipment."
