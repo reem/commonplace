@@ -34,7 +34,7 @@ def generate_all():
 def generate_player():
     "Generates a player."
     return Player.BrainPlayer("Commonplace Warrior",
-                              "A warrior sent by the commonplace coalition ",
+                              "A warrior sent by the commonplace coalition "
                               "to destroy the shadows that have invaded "
                               "the Brain.",
                               [], 100, 20)
@@ -66,9 +66,9 @@ def generate_room(room_template):
     else:
         Monster.BrainMonster.set_difficulty(
             difficulty_lookup[room_template.difficulty])
-        monster = generate_monster(randint(1, 3),
+        monster = [generate_monster(randint(1, 3),
                                    room_template.category,
-                                   room_template.difficulty)
+                                   room_template.difficulty)]
 
     if room_template.quote is None:
         try:
@@ -85,7 +85,7 @@ def generate_room(room_template):
                            room_template.description,
                            room_template.doors,
                            str(quote),
-                           [], [], [monster])
+                           [], [], monster)
 
 def fix_doors(rooms):
     "Changes index based doors to real references."
