@@ -279,16 +279,6 @@ SCW
 
 26
 Text:
-In the long run, understanding is always more important than getting things
-done.  Why? Because if you get things done without understanding what you're
-doing, you're probably doing them wrong.
-Author:
-Daniel Mclaury - http://qr.ae/Iga8l
-Category:
-CSSM
-
-27
-Text:
 The name for that is Pedigree collapse. The further back you go, the more
 ancestors you have, but the more opportunities there are for them to be
 related. So, if any two of your great grandparents were second cousins, then
@@ -302,7 +292,7 @@ Joshua Engel - http://qr.ae/IiDxG
 Category:
 CSSM
 
-28
+27
 Text:
 As long as our hypothetical Blub programmer is looking down the power
 continuum, he knows he's looking down. Languages less powerful than Blub are
@@ -317,7 +307,7 @@ Paul Graham - http://www.paulgraham.com/avg.html
 Category:
 CSSM
 
-29
+28
 Text:
 Lemme repeat that. By abstracting away the very concept of looping, you can
 implement looping any way you want, including implementing it in a way that
@@ -327,7 +317,7 @@ Joel Spolsky - http://www.joelonsoftware.com/items/2006/08/01.html
 Category:
 CSSM
 
-30
+29
 Text:
 The Law of Leaky Abstractions: All non-trivial abstractions, to some degree,
 are leaky.
@@ -339,7 +329,7 @@ Joel Spolsky - http://www.joelonsoftware.com/articles/LeakyAbstractions.html
 Category:
 CSSM
 
-31
+30
 Text:
 So when trying to think of a recursive way to solve a problem, try to think of
 when a recursive solution doesn't apply and see if you can use that as an edge
@@ -352,7 +342,7 @@ Learn You a Haskell - http://learnyouahaskell.com/recursion#thinking-recursively
 Category:
 CSSM
 
-32
+31
 Text:
 We'll also take a look at monoids, which are sort of like socks.
 Author:
@@ -360,7 +350,7 @@ Learn You a Haskell - http://learnyouahaskell.com/functors-applicative-functors-
 Category:
 CSSM
 
-33
+32
 Text:
 For now, let's examine how you would get the first 24 multiples of 13. Sure,
 you could do [13,26..24*13]. But there's a better way: take 24 [13,26..].
@@ -373,7 +363,7 @@ Learn You a Haskell - http://learnyouahaskell.com/starting-out
 Category:
 CSSM
 
-34
+33
 Text:
 I don't know of any other discipline that makes you feel so much like a wizard.
 Even engineering doesn't really feel that way, because you actually have to do
@@ -386,7 +376,7 @@ Nadeem Mohsin - http://qr.ae/NKoh5
 Category:
 CSSM
 
-35
+34
 Text:
 Any sufficiently advanced work is indistinguishable from play.
 Author:
@@ -394,7 +384,7 @@ Seb Paquet - http://qr.ae/NKolK
 Category:
 CSSM
 
-36
+35
 Text:
 Your First Time Wasn’t Gentle
 
@@ -427,7 +417,7 @@ Dave Fayram - http://dave.fayr.am/posts/2011-08-19-lets-go-shopping.html
 Category:
 CSSM
 
-37
+36
 Text:
 That said, most people are totally unprepared when they first meet up with
 Haskell or Ocaml. Heck, in Haskell even the semicolons are different. This
@@ -440,7 +430,7 @@ Dave Fayram - http://dave.fayr.am/posts/2011-08-19-lets-go-shopping.html
 Category:
 CSSM
 
-38
+37
 Text:
 Haskell lets you write functions that control other functions, and then you can
 write function that, you guessed it, control those functions. By the time you
@@ -451,7 +441,7 @@ Myself - http://qr.ae/NjMlb
 Category:
 CSSM
 
-39
+38
 Text:
 Lisp is worth learning for the profound enlightenment experience you will have
 when you finally get it; that experience will make you a better programmer for
@@ -461,7 +451,7 @@ Paul Grahan - http://www.paulgraham.com/avg.html
 Category:
 CSSM
 
-40
+39
 Text:
 You’re trying to predict the behavior of <complicated system>? Just model it as
 a <simple object>, and then add some secondary terms to account for
@@ -475,7 +465,7 @@ Randall Monroe, XKCD - http://xkcd.com/793/
 Category:
 CSSM
 
-41
+40
 Text:
 Normally I just define "odd" to mean "not even.”"
 Author:
@@ -483,7 +473,7 @@ Daniel Mclaury - http://qr.ae/NjlaR
 Category:
 CSSM
 
-42
+41
 Text:
 Many would suggest that a mathematical genius tends to think more like an
 average child and less like an average adult.
@@ -492,7 +482,7 @@ Daniel Mclaury - http://qr.ae/NjlZj
 Category:
 CSSM
 
-43
+42
 Text:
 The sky above the port
 was the color of television,
@@ -502,7 +492,7 @@ William Gibson - Neuromancer
 Category:
 TPW
 
-44
+43
 Text:
 In three words I can sum up everything I've learned about life. It goes on.
 Author:
@@ -510,7 +500,7 @@ Robert Frost
 Category:
 TPW
 
-45
+44
 Text:
 A witty saying proves nothing
 Author:
@@ -518,7 +508,7 @@ Voltaire
 Category:
 TPW
 
-46
+45
 Text:
 Find what you love and let it kill you.
 Author:
@@ -526,7 +516,7 @@ Charles Bukowski
 Category:
 TPW
 
-47
+46
 Text:
 They carried all they could bear, and then some, including a silent awe for the
 terrible power of the things they carried.
@@ -535,7 +525,7 @@ Tim O'Brien - The Things They Carried
 Category:
 TPW
 
-48
+47
 Text:
 Courage, I seemed to think, comes to us in finite quantities, like an
 inheritance, and by being frugal and stashing it away and letting it earn
@@ -549,7 +539,7 @@ Tim O'Brien - The Things They Carried
 Category:
 TPW
 
-49
+48
 Text:
 The Time you have in Jellybeans
 Author:
@@ -557,7 +547,7 @@ Ze Frank - http://www.youtube.com/watch?v=BOksW_NabEk
 Category:
 TPW
 
-50
+49
 Text:
 Crushing Words
 Author:
@@ -565,7 +555,7 @@ Ze Frank - http://www.youtube.com/watch?v=xJ9e32MNEOk
 Category:
 TPW
 
-51
+50
 Text:
 An Invocation for Beginnings
 Author:
@@ -573,7 +563,7 @@ Ze Frank - http://www.youtube.com/watch?v=RYlCVwxoL_g
 Category:
 TPW
 
-52
+51
 Text:
 Trying to defeat an ideology by killing individuals is like trying to save a
 marriage with a blowjob. It might buy you some time, but in the end it'll just
@@ -583,7 +573,7 @@ Ze Frank
 Category:
 TPW
 
-53
+52
 Text:
 Sticks and stones may break my bones but words leave psychological scars that
 never heal.
@@ -592,7 +582,7 @@ Unknown
 Category:
 TPW
 
-54
+53
 Text:
 if
 Author:
@@ -600,7 +590,7 @@ The Spartans
 Category:
 TPW
 
-55
+54
 Text:
 With sufficient metaphorization, you can make it work. But then, you can make
 any book work if you're willing to abstract it far enough that it's
@@ -611,7 +601,7 @@ Joshua Engel - http://qr.ae/IJdXq
 Category:
 IE
 
-56
+55
 Text:
 You don't.  You go right ahead and "force your cultural views on other people."
 We've arrived into some weird bizarro point in human space-time where we're
@@ -647,7 +637,7 @@ Dan Holliday - http://qr.ae/pEyPx
 Category:
 IE
 
-57
+56
 Text:
 I think that you have science mixed up with Sophism. Science's job description
 doesn't call for being able to defend any position you hand it. That's for
@@ -679,7 +669,7 @@ Joshua Engel - http://qr.ae/hp1fv
 Category:
 IE
 
-58
+57
 Text:
 Anti-intellectualism has been a constant thread winding its way through our
 political and cultural life, nurtured by the false notion that democracy means
@@ -689,7 +679,7 @@ Isaac Asimov
 Category:
 IE
 
-59
+58
 Text:
 This theory is stupid, but hey, hardly the dumbest thing I've given in this
 answer so far. When you've got a holy, infallible text in which you're
@@ -700,7 +690,7 @@ Joshua Engel - http://qr.ae/IyrhR
 Category:
 IE
 
-60
+59
 Text:
 Do You Believe in God?
 Author:
