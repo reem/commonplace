@@ -34,6 +34,7 @@ class BrainRoom(pl.BaseRoom):
             result.append("characters")
         if self.monsters != []:
             result.append("monsters")
+        return result
 
     def full_info(self):
         "Gives the full information about the room."
