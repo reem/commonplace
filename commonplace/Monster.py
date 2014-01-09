@@ -52,12 +52,17 @@ class BaseMonster(BaseObj):
 
 class BrainMonster(BaseMonster):
     "Implements monsters with quotes and multiple custom constructors.."
+    _general_difficulty = 0.75
     __difficulty = 1
 
     def __init__(self, name, description, start_health, attack, drop,
                  quote, monster_type):
         start_health *= BrainMonster.__difficulty
+        start_health *= BrainMonster._general_difficulty
         attack *= BrainMonster.__difficulty
+        attack *= BrainMonster._general_difficulty
+        start_health = int(start_health)
+        attack = int(attack)
 
         BaseMonster.__init__(self, name, description, start_health,
                              attack, drop)
