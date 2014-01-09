@@ -11,7 +11,7 @@ import commonplace.Player as Player
 import commonplace.Rooms as Rooms
 import commonplace.Places as Places
 
-from commonplace.Quotes import QUOTES#, CATEGORIES
+from commonplace.Quotes import QUOTES
 from commonplace.ItemList import ITEMS
 from commonplace.Map import MAP
 from commonplace.MonsterList import MONSTERS
@@ -25,7 +25,11 @@ def generate_all():
 
 def generate_player():
     "Generates a player."
-    pass
+    return Player.BrainPlayer("Commonplace Warrior",
+                              "A warrior sent by the commonplace coalition ",
+                              "to destroy the shadows that have invaded "
+                              "the Brain.",
+                              [], 100, 20)
 
 def generate_hall(hall_template):
     "Generates a hall."
