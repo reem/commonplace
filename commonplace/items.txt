@@ -1,28 +1,448 @@
 Types:
-    Helmet
-    Armor
-    Sword
-    Shield
-    Ring
+    helmet
+    armor
+    sword
+    shield
+    ring
 
 1
 Name:
-Sword of Invincible Summer
+Sword of Complex Numbers
 Description:
-The blade is hot and grows fiery red
+This blade is imaginary, but the shadows don't know that.
 Category:
-Category1
-Strength: 4
+CSSM
+Strength: 1
 Type:
-Sword
+sword
 
 2
 Name:
-Helmet of Winter
+Imaginary Armor
 Description:
-The helmet is cold and heavy
+This armor is imaginary, but the shadows don't know that.
 Category:
-Category1
+CSSM
+Strength: 1
+Type:
+helmet
+
+3
+Name:
+Imaginary Helmet
+Description:
+This helmet is imaginary, but the shadows don't know that.
+Category:
+CSSM
+Strength: 1
+Type:
+helmet
+
+4
+Name:
+Imaginary Shield
+Description:
+This shield is imaginary, but the shadows don't know that.
+Category:
+CSSM
+Strength: 1
+Type:
+shield
+
+5
+Name:
+Sword of Invincible Fire
+Description:
+filler
+Category:
+TPW
 Strength: 4
 Type:
-Helmet
+sword
+
+6
+Name:
+Sword of Fractions
+Description:
+It's more like a dagger, but at least it's real.
+Category:
+CSSM
+Strength: 2
+Type:
+sword
+
+7
+Name:
+Irrational Helmet
+Description:
+At least it's part of a helmet.
+Category:
+CSSM
+Strength: 2
+Type:
+helmet
+
+8
+Name:
+Irrational Armor
+Description:
+Heavy and thin, but it works.
+Category:
+CSSM
+Strength: 2
+Type:
+armor
+
+9
+Name:
+Irrational Ring
+Description:
+Send the shadows into madness.
+Category:
+CSSM
+Strength: 2
+Type:
+ring
+
+10
+Name:
+Sword of the Reals
+Description:
+Dense and continuous, with an infinitely sharp edge. That's more like it.
+Category:
+CSSM
+Strength: 4
+Type:
+sword
+
+11
+Name:
+Reals Armor
+Description:
+Infinitely dense armor. Offers good protection.
+Category:
+CSSM
+Strength: 4
+Type:
+armor
+
+12
+Name:
+Sword of Obscurity
+Description:
+You've probably never heard of it.
+Category:
+IE
+Strength: 1
+Type:
+sword
+
+13
+Name:
+Obscure Ring
+Description:
+Send the shadows back to farmsdale! Oh, you don't get the reference?
+Category:
+IE
+Strength: 1
+Type:
+ring
+
+14
+Name:
+Godless Shield
+Description:
+Protects against lightning strikes.
+Category:
+IE
+Strength: 2
+Type:
+shield
+
+15
+Name:
+Helmet of Atheism
+Description:
+Made out of copies of the God Delusion. Also metal.
+Category:
+IE
+Strength: 2
+Type:
+armor
+
+16
+Name:
+Inspirational Armor
+Description:
+Attempt the impossible, like beating this game.
+Category:
+SCW
+Strength: 3
+Type:
+armor
+
+17
+Name:
+World-Changer
+Description:
+Changes the world. Can't you read?
+Category:
+SCW
+Strength: 4
+Type:
+sword
+
+18
+Name:
+Impossible Sword
+Description:
+Kills shadows, somehow.
+Category:
+SCW
+Strength: 3
+Type:
+sword
+
+19
+Name:
+Modded Armor
+Description:
+Has quad-exhaust and flames painted on the side. Belongs to someone who takes
+the world into their own hands.
+Category:
+SCW
+Strength: 4
+Type:
+armor
+
+20
+Name:
+Bootstrap Ring
+Description:
+Gives you what you need to begin your dream.
+Category:
+SCW
+Strength: 4
+Type:
+ring
+
+21
+Name:
+Racist Sword
+Description:
+Only kills shadows.
+Category:
+DPCW
+Strength: 2
+Type:
+sword
+
+22
+Name:
+Sword of Climate Change
+Description:
+A real world wrecker.
+Category:
+DPCW
+Strength: 4
+Type:
+sword
+
+23
+Name:
+Nuclear Ring
+Description:
+Blow them away. Or power the world.
+Category:
+DPCW
+Strength: 4
+Type:
+ring
+
+24
+Name:
+Risky Armor
+Description:
+Has some holes, but maybe it has a great return.
+Category:
+DPCW
+Strength: 2
+Type:
+armor
+
+25
+Name:
+Shield of Social Inequality
+Description:
+Protects against the poor. Keep your money.
+Category:
+DPCW
+Strength: 2
+Type:
+shield
+
+26
+Name:
+Armor of Obesity
+Description:
+Very very thick.
+Category:
+DPCW
+Strength: 3
+Type:
+armor
+
+27
+Name:
+Helmet of Monsters
+Description:
+Protects against shadows, among others.
+Category:
+DPCW
+Strength: 3
+Type:
+helmet
+
+28
+Name:
+Helmet of Time
+Description:
+It's inevitable.
+Category:
+DPCW
+Strength: 4
+Type:
+helmet
+
+29
+Name:
+Ring of Money
+Description:
+Useful, consuming.
+Category:
+DPCW
+Strength: 3
+Type:
+ring
+
+30
+Name:
+Biased Sword
+Description:
+You never know which way it'll lean.
+Category:
+DPCW
+Strength: 2
+Type:
+sword
+
+31
+Name:
+Pessimistic Armor
+Description:
+They don't make it stronger. This is for people who think they're gonna die
+tomorrow.
+Category:
+DPCW
+Strength: 4
+Type:
+armor
+
+32
+Name:
+Optimistic Shield
+Description:
+Paper thin, but it's made of metal!
+Category:
+DPCW
+Strength: 2
+Type:
+shield
+
+33
+Name:
+Armor of Nouns
+Description:
+Armor. Titanium.
+Category:
+TPW
+Strength: 4
+Type:
+armor
+
+34
+Name:
+Shield of Nouns
+Description:
+Shield. Steel.
+Category:
+TPW
+Strength: 4
+Type:
+shield
+
+35
+Name:
+Sword of Verbs
+Description:
+Slashing. Slicing. Stabbing.
+Category:
+TPW
+Strength: 4
+Type:
+sword
+
+36
+Name:
+Ring of Adjectives
+Description:
+Powerful obliterator.
+Category:
+TPW
+Strength: 4
+Type:
+ring
+
+37
+Name:
+Sword of Name-Calling
+Description:
+Kill those stupid useless shadows.
+Category:
+TPW
+Strength: 3
+Type:
+sword
+
+38
+Name:
+Descriptive Helm
+Description:
+Have it describe itself to you. It's brilliant.
+Category:
+TPW
+Strength: 3
+Type:
+helmet
+
+39
+Name:
+Shield of Sobering Words
+Description:
+Bet you never thought about it that way, did you?
+Category:
+TPW
+Strength: 3
+Type:
+shield
+
+40
+Name:
+Ring of Awkward Words
+Description:
+Silence them with sex.
+Category:
+TPW
+Strength: 3
+Type:
+ring
