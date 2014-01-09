@@ -76,7 +76,7 @@ class PoemRoom(pl.BaseRoom):
             result.append("guardian")
         return result
 
-    def full_info(self, poem=True):
+    def full_info(self, poem=False):
         """
         Gives the full information about the room, for PoemRooms this
         is mostly for debugging.
@@ -92,5 +92,5 @@ class PoemRoom(pl.BaseRoom):
                 base.format_objects(self.treasure))
         if self.guardian is not None:
             result += "\n\nGuardian:\n{0}".format(
-                base.format_objects(self.guardian))
+                base.format_objects([self.guardian]))
         return result
