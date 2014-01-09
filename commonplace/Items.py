@@ -52,7 +52,7 @@ class BrainEquipment(BaseEquipment):
         self.quote = quote
 
     def __str__(self):
-        return "{}\n{}\n{}".format(BaseItem.__str__(self), self.quote,
+        return "{}\n\n{}\n\n{}".format(BaseItem.__str__(self), self.quote,
                                    self.format_stats())
 
 
