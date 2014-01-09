@@ -12,7 +12,7 @@ import commonplace.Base as base
 class BrainRoom(pl.BaseRoom):
     "Class used for rooms in the game."
     def __init__(self, name, description, doors, quote, items, npcs, monsters):
-        pl.BaseRoom.__init__(name, description, doors)
+        pl.BaseRoom.__init__(self, name, description, doors)
         self.quote = quote        # String
         self.items = items        # List
         self.npcs = npcs          # List
@@ -54,7 +54,7 @@ class BrainRoom(pl.BaseRoom):
 class PoemRoom(pl.BaseRoom):
     "Class used for end rooms."
     def __init__(self, name, description, doors, poem, treasure, guardian):
-        pl.BaseRoom.__init__(name, description, doors)
+        pl.BaseRoom.__init__(self, name, description, doors)
         self.poem = poem
         self.treasure = treasure
         self.guardian = guardian
