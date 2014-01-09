@@ -109,6 +109,11 @@ class BrainMonster(BaseMonster):
         else:
             cls.__difficulty = value
 
+    @classmethod
+    def read_difficulty(cls):
+        "Reads the __difficulty attribute."
+        return cls.__difficulty
+
     def full_info(self):
         "Full information for prompting."
         return "{}\n{}\nHealth: {}\nAttack: {}".format(BaseObj.__str__(self),
