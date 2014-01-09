@@ -8,7 +8,7 @@ Holds the Map Template
 from operator import contains
 
 # pylint: disable=R0903, R0913
-from commonplace.Quotes import CATEGORIES
+from commonplace.Quotes import CATEGORIES, Quote
 from commonplace.Base import assert_with_dump
 from commonplace.Rooms import PoemRoom
 
@@ -39,7 +39,8 @@ class MapTemplate(object):
 
 class RoomTemplate(object):
     "Template for generating a room."
-    def __init__(self, name, description, doors, difficulty, category):
+    def __init__(self, name, description, doors, difficulty, category,
+                 quote=None):
         self.name = name                # String
         self.description = description  # String
 
@@ -55,6 +56,8 @@ class RoomTemplate(object):
 
         assert_with_dump(CATEGORIES, category, contains)
         self.category = category        # String
+
+        self.quote = quote
 
 # TODO: IMPLEMENT REAL CATEGORIES.
 cat1 = 'test_category'
@@ -76,7 +79,13 @@ MAP = MapTemplate(
             "It's dark and squishy everywhere. You've managed to enter but"
             " don't know where you are.",
             {NORTH: 1},
-            1, cat1
+            1, cat1,
+            quote=Quote("To be nobody but yourself in a world which is ",
+                        "doing its best, night and day, to make you ",
+                        "everybody else means to fight the hardest ",
+                        "battle which any human being can fight; and never ",
+                        "stop fighting.", "e.e. cumming", cat1)
+
         ),
         RoomTemplate(
             "A Junction",
@@ -131,7 +140,9 @@ MAP = MapTemplate(
             {NORTHEAST: 14,
              NORTH: 8,
              SOUTH: 6},
-            2, cat1
+            2, cat1,
+            quote=Quote("Whenever at a crossroads, do what you"
+                        " want to be would do.", "Anonymous", cat1)
         ),
         RoomTemplate(
             "A Transform",

@@ -51,12 +51,18 @@ def generate_room(room_template):
     elif room_template.name == "Throne":
         return generate_throne(room_template)
 
-    monster = generate_monster(MONSTERS.pop(),
+    monster = generate_monster(next(MONSTERS),
                                room_template.category)
+
+    if room_template.quote is None:
+        quote = QUOTES[room_template.category].pop()
+    else:
+        quote = room_template.quote
+
     return Rooms.BrainRoom(room_template.name,
                            room_template.description,
                            room_template.doors,
-                           str(QUOTES[room_template.category].pop()),
+                           str(quote),
                            generate_item(room_template.category,
                                          room_template.difficulty),
                            [], [monster])
@@ -146,26 +152,6 @@ def generate_monster(monster_template, category):
     return monster_template.correct_constructor(monster_template.name,
                                                 monster_template.description,
                                                 drop, str(quote))
-
-
-class MonsterTemplate(object):
-    "Template to generate a monster."
-    _strength_to_constructor = {
-        1: Monster.BrainMonster.shadow_knight,
-        2: Monster.BrainMonster.shadow_giant,
-        3: Monster.BrainMonster.shadow_gargantuan,
-        4: Monster.BrainMonster.shadow_guardian
-    }
-
-    def __init__(self, name, description, category, strength):
-        self.name = name  # String
-        self.description = description  # String
-        self.category = category  # String
-        self.strength = strength  # Int from 1 -> 4
-
-    def correct_constructor(self):
-        "Returns the appropriate BrainMonster constructor to use."
-        return self._strength_to_constructor[self.strength]
 
 
 class ItemSet(object):
