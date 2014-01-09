@@ -244,7 +244,6 @@ class PoemGame(BaseObj):
         import sys
 
         if isinstance(defeat_exception, PlayerDeadException):
-            sleep(1)
             print "\nIf at first you don't succeed; call it version 1.0."
             sleep(1)
             print "    -- Unknown"
@@ -262,7 +261,6 @@ class PoemGame(BaseObj):
         import sys
 
         if isinstance(victory_exception, FinalBossDeadException):
-            sleep(1)
             print "\nImpossible is just a big word thrown around by small men"
             sleep(0.5)
             print "who find it easier to live in the world they've been given"
