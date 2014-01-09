@@ -11,11 +11,11 @@ import commonplace.Player as Player
 import commonplace.Rooms as Rooms
 import commonplace.Places as Places
 
+from random import randint
 from commonplace.Quotes import QUOTES
 from commonplace.ItemList import ITEMS
-from commonplace.Map import MAP
-from commonplace.MonsterList import MONSTERS
-# pylint: disable=R0903, R0913
+from commonplace.Map import MAP, THRONE_ROOMS, SUMMER_WINTER_SET
+# pylint: disable=R0903, R0913, C0301
 
 
 def generate_all():
@@ -31,13 +31,11 @@ def generate_player():
                               "the Brain.",
                               [], 100, 20)
 
-def generate_hall(hall_template):
-    "Generates a hall."
-    pass
-
 def generate_throne(throne_template):
     "Generates a throne."
-    pass
+    throne_room = THRONE_ROOMS[throne_template.category]
+    throne_room.doors = throne_template.doors
+    return throne_room
 
 def generate_room(room_template):
     """
@@ -52,15 +50,16 @@ def generate_room(room_template):
         4: 8
     }
 
-    if room_template.name == "Hall":
-        return generate_hall(room_template)
-    elif room_template.name == "Throne":
+    if room_template.name == "Throne":
         return generate_throne(room_template)
 
-    Monster.BrainMonster.set_difficulty(
-        difficulty_lookup[room_template.difficulty])
-    monster = generate_monster(next(MONSTERS),
-                               room_template.category)
+    if not room_template.has_monster:
+        monster = []
+    else:
+        Monster.BrainMonster.set_difficulty(
+            difficulty_lookup[room_template.difficulty])
+        monster = generate_monster(randint(1, 3),
+                                   room_template.category)
 
     if room_template.quote is None:
         quote = QUOTES[room_template.category].pop()
@@ -71,9 +70,7 @@ def generate_room(room_template):
                            room_template.description,
                            room_template.doors,
                            str(quote),
-                           generate_item(room_template.category,
-                                         room_template.difficulty),
-                           [], [monster])
+                           [], [], [monster])
 
 def fix_doors(rooms):
     "Changes index based doors to real references."
@@ -91,11 +88,15 @@ def generate_map():
 
     return Places.BaseMap(map_template.name,
                           map_template.description,
-                          rooms, 0)
+                          rooms, map_template.start_room)
 
 def generate_item(category, strength):
     "Generates an item appropriate for a category and strength."
     item_template = ITEMS[category][strength].pop()
+
+    if item_template.name == "Sword of Invincible Summer":
+        return SUMMER_WINTER_SET.sword
+
     quote = QUOTES[category].pop()
     health, attack = stats_from_template(item_template)
     stats = {'health': health, 'attack': attack}
@@ -150,55 +151,31 @@ def stats_from_template(item_template):
 
     return master_lookup[item_template.item_type][item_template.strength]
 
+MONSTER_LOOKUP = {
+    1: ("Shadow Knight",
+        "A human sized, sword wielding shadow. These are the most commonplace."),
+    2: ("Shadow Giant",
+        "Standing at about twice the size of people, a shadow giant is a threat "
+        "to everything around it. Because of its general stupidity, that often "
+        "includes itself."),
+    3: ("Shadow Gargantuan",
+        "These monstrosities crawl around on four arms and are large enough to "
+        "swallow people in a single bite. Be wary of them.")
+}
 
-def generate_monster(monster_template, category):
-    "Generates a monster from a monster_template"
-    quote = QUOTES[monster_template.category].pop()
-    drop = generate_item(category,
-                         monster_template.strength)
+def generate_monster(strength, category):
+    "Generates a monster"
 
-    return monster_template.correct_constructor(monster_template.name,
-                                                monster_template.description,
-                                                drop, str(quote))
+    strength_to_constructor = {
+        1: Monster.BrainMonster.shadow_knight,
+        2: Monster.BrainMonster.shadow_giant,
+        3: Monster.BrainMonster.shadow_gargantuan,
+    }
 
+    quote = QUOTES[category].pop()
+    drop = generate_item(category, strength)
 
-class ItemSet(object):
-    "Groups a set of items."
-    def __init__(self, name, sword, helmet, shield, armor, ring):
-        self.name = name
-        self.sword = sword
-        self.helmet = helmet
-        self.shield = shield
-        self.armor = armor
-        self.ring = ring
-        self.items = [sword, helmet, shield, armor, ring]
+    name, description = MONSTER_LOOKUP[strength]
 
-SUMMER_WINTER_SET = ItemSet(
-    "Summer/Winter Set",
-    Items.BrainEquipment(
-        "Sword of Invincible Summer", "The sword glows a fiery red.",
-        'weapon', {'health': -1000, 'attack': 5000},
-        "... I found there was, within me, an invincible summer."
-        "\n    - Albert Camus"),
-
-    Items.BrainEquipment(
-        "Helmet of Winter", "The helmet is cold and heavy, but unblemished.",
-        'helmet', {'health': 250, 'attack': -50},
-        "In the midst of Winter ...\n    - Albert Camus"),
-
-    Items.BrainEquipment(
-        "Shield of Winter", "The shield is cold and heavy, but unblemished.",
-        'shield', {'health': 500, 'attack': -100},
-        "In the midst of Winter ...\n    - Albert Camus"),
-
-    Items.BrainEquipment(
-        "Armor of Winter",
-        "The armor is cold and extremely heavy, but unblemished.",
-        'armor', {'health': 2000, 'attack': -200},
-        "In the midst of Winter ...\n    - Albert Camus"),
-
-    Items.BrainEquipment(
-        "Ring of Winter",
-        "The ring is frighteningly cold and exudes an aura of protection.",
-        'armor', {'health': 500, 'attack': -100},
-        "In the midst of Winter ...\n    - Albert Camus"))
+    return strength_to_constructor[strength](name, description,
+                                             drop, str(quote))
