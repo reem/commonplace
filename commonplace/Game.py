@@ -29,7 +29,7 @@ from commonplace.Rooms import BrainRoom, PoemRoom
 
 # Unfortunately I don't have time to actually fix this
 # right now. I might later.
-# pylint: disable=R0912, R0915, R0201
+# pylint: disable=R0912, R0915, R0201, R0914
 
 
 class PoemGame(BaseObj):
@@ -65,7 +65,9 @@ class PoemGame(BaseObj):
         self.turn_count += 1
         print "Turn {0.turn_count}:\n".format(self)
 
-        self.player.health += self.player.max_health / 5
+        self.player.health += int(self.player.max_health / 5)
+        spaced_print("You healed {} hp.".format(
+            int(self.player.max_health / 5)))
 
         spaced_print("Location:", pre=False)
         print self.current_room.full_info()
