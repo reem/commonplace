@@ -14,7 +14,9 @@ from commonplace.Exceptions import (BaseVictoryException,
                                     BaseDefeatException,
                                     MonsterDeadException,
                                     AbortFightException,
-                                    UnhandledOptionError)
+                                    UnhandledOptionError,
+                                    PlayerDeadException,
+                                    FinalBossDeadException)
 
 from commonplace.Base import (format_objects,
                               spaced_print,
@@ -27,7 +29,7 @@ from commonplace.Rooms import BrainRoom, PoemRoom
 
 # Unfortunately I don't have time to actually fix this
 # right now. I might later.
-# pylint: disable=R0912, R0915
+# pylint: disable=R0912, R0915, R0201
 
 
 class PoemGame(BaseObj):
@@ -237,11 +239,47 @@ class PoemGame(BaseObj):
 
     def end_game_defeat(self, defeat_exception):
         "Takes a defeat exception and ends the game."
-        pass
+        import sys
+
+        if isinstance(defeat_exception, PlayerDeadException):
+            sleep(1)
+            print "\nIf at first you don't succeed; call it version 1.0."
+            sleep(1)
+            print "    -- Unknown"
+
+            sleep(1)
+            print "\nYou've fought valiantly, but have been killed."
+            sleep(1)
+        else:
+            sleep(1)
+            print str(defeat_exception)
+        sys.exit(0)
 
     def end_game_victory(self, victory_exception):
         "Takes a victory exception and ends the game."
-        pass
+        import sys
+
+        if isinstance(victory_exception, FinalBossDeadException):
+            sleep(1)
+            print "\nImpossible is just a big word thrown around by small men"
+            sleep(0.5)
+            print "who find it easier to live in the world they've been given"
+            sleep(0.5)
+            print "than to explore the power they have to change it."
+            sleep(0.5)
+            print "Impossible is not a fact - it's an opinion. Impossible is"
+            sleep(0.5)
+            print "not a declaration - it's a dare. Impossible is potential."
+            sleep(0.5)
+            print "Impossible is temporary. Impossible is nothing."
+            sleep(0.5)
+            print "    -- Muhammad Ali"
+            sleep(1)
+
+            print "\nYou've destroyed the King of Shadow and vanquished the"
+            print "shadows from the Brain. You have changed the world."
+            print "Well done."
+        sys.exit(0)
 
 
 def fight(player, monster, monster_name='monster', can_run=True):
@@ -258,8 +296,8 @@ def fight(player, monster, monster_name='monster', can_run=True):
             if can_run:
                 fight_choice = prompt(['attack', 'run'])
             else:
-                print "You can't run. You must continue the fight."
-                sleep(0.5)
+                print "You can't run."
+                fight_choice = prompt(['attack'])
 
             if fight_choice == 'attack':
                 player_multiplier = random() + 0.5
