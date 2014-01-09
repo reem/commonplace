@@ -289,6 +289,12 @@ MAP = MapTemplate(
         RoomTemplate(
             "Throne",
             "",
+            {NORTHEAST: 24},
+            4, CAT5
+        ),
+        RoomTemplate(
+            "Throne",
+            "",
             {},
             5, CAT1
         ),
