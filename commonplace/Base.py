@@ -35,7 +35,7 @@ def format_objects(items, indent=1):
         return "\n".join(["    " * indent + "{0}. {1.name}".format(i + 1, item)
                           for i, item in enumerate(items)])
     elif isinstance(items, dict):
-        return "\n".join(["    " * indent + "{k}: {v.name}".format(
+        return "\n".join(["    " * indent + "{k}: {v}".format(
             k=k, v=items[k].name if items[k] is not None else 'None')
                           for k in items])
 
