@@ -201,8 +201,13 @@ class PoemGame(BaseObj):
                 assert_with_dump(self.current_room, PoemRoom,
                                  callback=isinstance)
 
-                spaced_print("Guardian:\n{}".format(
-                    str(self.current_room.guardian)))
+                spaced_print("Guardian:\n\n{}".format(
+                    self.current_room.guardian.full_info()))
+                guardian_choice = prompt(['attack', 'back'])
+
+                if guardian_choice == 'back':
+                    continue
+
                 spaced_print("You cannot run from a guardian. You must fight.",
                              pre=False)
 
@@ -327,7 +332,7 @@ def fight(player, monster, monster_name='monster', can_run=True):
                 raise AbortFightException()
 
         except MonsterDeadException:
-            spaced_print("You killed the {}!".format(monster_name), pre=False)
+            print "You killed the {}!".format(monster_name)
             raise
 
 
