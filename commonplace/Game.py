@@ -303,10 +303,10 @@ def fight(player, monster, monster_name='monster', can_run=True):
 
             if fight_choice == 'attack':
                 player_multiplier = random() + 0.5
-                player_damage = player.attack * player_multiplier
+                player_damage = int(player.attack * player_multiplier)
 
                 monster_multiplier = random() + 0.5
-                monster_damage = monster.attack * monster_multiplier
+                monster_damage = int(monster.attack * monster_multiplier)
 
                 order = random()
                 if order <= 0.5:
