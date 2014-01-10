@@ -126,8 +126,10 @@ def create_items_from_file(item_filename):
                                 strength, item_type)
         items[category][strength].append(new_item)
 
+    for _, i in items.iteritems():
+        for _, j in i.iteritems():
+            shuffle(j)
     return items
 
 ITEM_FILE = "./commonplace/items.txt"
 ITEMS = create_items_from_file(ITEM_FILE)
-shuffle(ITEMS)
