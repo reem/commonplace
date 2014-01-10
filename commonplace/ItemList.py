@@ -7,6 +7,7 @@ Items is of the form:
 
 from commonplace.Quotes import CATEGORIES
 from commonplace.Base import bumped_range
+from random import shuffle
 # pylint: disable=R0903,R0913
 
 
@@ -129,3 +130,4 @@ def create_items_from_file(item_filename):
 
 ITEM_FILE = "./commonplace/items.txt"
 ITEMS = create_items_from_file(ITEM_FILE)
+shuffle(ITEMS)
