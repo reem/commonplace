@@ -333,7 +333,7 @@ SUMMER_WINTER_SET = ItemSet(
     BrainEquipment(
         "Armor of Winter",
         "The armor is cold and extremely heavy, but unblemished.",
-        'armor', {'health': 300, 'attack': -200},
+        'armor', {'health': 3000, 'attack': -200},
         "In the midst of Winter ...\n    - Albert Camus"),
 
     BrainEquipment(
