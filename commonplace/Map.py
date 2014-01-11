@@ -342,38 +342,38 @@ SUMMER_WINTER_SET = ItemSet(
         'armor', {'health': 600, 'attack': 200},
         "In the midst of Winter ...\n    - Albert Camus"))
 
-THRONE_ROOMS = {
-    CAT1: PoemRoom("Throne of Mathematics",
-                   "Numbers, wires, and computers line the halls of this "
-                   "room.",
-                   {}, POEMS[0],
-                   None,
-                   BrainMonster("King of Shadows",
-                                "He is dark and his features "
-                                "are impossible to make out. He is standing "
-                                "on a mound of dead challengers.",
-                                20000, 600, None,
-                                str(Quote("In the long run, understanding is always "
-                                          "more important than getting things done. "
-                                          "Why? Because if you get things done "
-                                          "without understanding what you're doing,"
-                                          " you're probably doing them wrong.",
-                                          "Daniel Mclaury - http://qr.ae/Iga8l",
-                                          CAT1)),
-                                monster_type='FinalBoss')
+THRONE_ROOMS = {}
 
-    ),
-    CAT2: PoemRoom("Throne of Snobbery",
+THRONE_ROOMS[CAT1] = PoemRoom("Throne of Mathematics",
+                    "Numbers, wires, and computers line the halls of this "
+                    "room.",
+                    {}, POEMS[0],
+                    None,
+                    BrainMonster("King of Shadows",
+                                 "He is dark and his features "
+                                 "are impossible to make out. He is standing "
+                                 "on a mound of dead challengers.",
+                                 20000, 600, None,
+                                 str(Quote("In the long run, understanding is always "
+                                           "more important than getting things done. "
+                                           "Why? Because if you get things done "
+                                           "without understanding what you're doing,"
+                                           " you're probably doing them wrong.",
+                                           "Daniel Mclaury - http://qr.ae/Iga8l",
+                                           CAT1)),
+                                 monster_type='FinalBoss'))
+BrainMonster.set_difficulty(4)
+THRONE_ROOMS[CAT2] = PoemRoom("Throne of Snobbery",
                    "Books and words line the halls of this room.",
                    {}, POEMS[1],
                    None,
-                   BrainMonster.shadow_guardian("Guardian of Words",
+                   BrainMonster.shadow_guardian("Guardian of Thought",
                                                 "His armor is covered with obscure "
                                                 "glyphs that nobody knows.",
                                                 SUMMER_WINTER_SET.helmet,
-                                                str(QUOTES[CAT2].pop()))
-    ),
-    CAT3: PoemRoom("Throne of the World",
+                                                str(QUOTES[CAT2].pop())))
+BrainMonster.set_difficulty(8)
+THRONE_ROOMS[CAT3] = PoemRoom("Throne of the World",
                    "This room has the vestiges of a busy place. World changing work "
                    "is done here.",
                    {}, POEMS[2],
@@ -382,18 +382,18 @@ THRONE_ROOMS = {
                                                 "He shifts restlessly, awaiting your "
                                                 "challenge.",
                                                 SUMMER_WINTER_SET.armor,
-                                                str(QUOTES[CAT3].pop()))
-    ),
-    CAT4: PoemRoom("Throne of Cynicism",
+                                                str(QUOTES[CAT3].pop())))
+BrainMonster.set_difficulty(8)
+THRONE_ROOMS[CAT4] = PoemRoom("Throne of Cynicism",
                    "A plain room with a large wooden throne.",
                    {}, POEMS[3],
                    None,
                    BrainMonster.shadow_guardian("Guardian of Cynicism",
                                                 "He thinks you are dumb.",
                                                 SUMMER_WINTER_SET.shield,
-                                                str(QUOTES[CAT4].pop()))
-    ),
-    CAT5: PoemRoom("Throne of Words",
+                                                str(QUOTES[CAT4].pop())))
+BrainMonster.set_difficulty(8)
+THRONE_ROOMS[CAT5] = PoemRoom("Throne of Words",
                    "Letters and words dance around this room in glee. "
                    "This is a place of sharing and knowledge, but also "
                    "a monument to the terrible power of words.",
@@ -402,6 +402,4 @@ THRONE_ROOMS = {
                    BrainMonster.shadow_guardian("Guardian of Words",
                                                 "He sits at a desk, writing.",
                                                 SUMMER_WINTER_SET.ring,
-                                                str(QUOTES[CAT5].pop()))
-    )
-}
+                                                str(QUOTES[CAT5].pop())))
