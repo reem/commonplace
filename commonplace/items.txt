@@ -25,7 +25,7 @@ Category:
 CSSM
 Strength: 1
 Type:
-helmet
+armor
 
 3
 Name:
