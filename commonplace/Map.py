@@ -316,7 +316,7 @@ SUMMER_WINTER_SET = ItemSet(
     "Summer/Winter Set",
     BrainEquipment(
         "Sword of Invincible Summer", "The sword glows a fiery red.",
-        'weapon', {'health': -1000, 'attack': 5000},
+        'sword', {'health': -1000, 'attack': 5000},
         "... I found there was, within me, an invincible summer."
         "\n    - Albert Camus"),
 
@@ -339,7 +339,7 @@ SUMMER_WINTER_SET = ItemSet(
     BrainEquipment(
         "Ring of Winter",
         "The ring is frighteningly cold and exudes an aura of protection.",
-        'armor', {'health': 600, 'attack': 200},
+        'ring', {'health': 600, 'attack': 200},
         "In the midst of Winter ...\n    - Albert Camus"))
 
 THRONE_ROOMS = {}
