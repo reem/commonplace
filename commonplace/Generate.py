@@ -54,8 +54,8 @@ def generate_room(room_template):
     difficulty_lookup = {
         1: 1,
         2: 2,
-        3: 4,
-        4: 8
+        3: 6,
+        4: 15
     }
 
     if room_template.name == "Throne":
@@ -67,8 +67,8 @@ def generate_room(room_template):
         Monster.BrainMonster.set_difficulty(
             difficulty_lookup[room_template.difficulty])
         monster = [generate_monster(randint(1, 3),
-                                   room_template.category,
-                                   room_template.difficulty)]
+                                    room_template.category,
+                                    room_template.difficulty)]
         Monster.BrainMonster.set_difficulty(1)
 
     if room_template.quote is None:
@@ -99,6 +99,7 @@ def fix_doors(rooms):
                 raise
     return rooms
 
+
 def generate_map():
     "Generates the map."
     map_template = MAP
@@ -109,6 +110,7 @@ def generate_map():
     return Places.BaseMap(map_template.name,
                           map_template.description,
                           rooms, map_template.start_room)
+
 
 def generate_item(category, strength):
     "Generates an item appropriate for a category and strength."
@@ -134,6 +136,7 @@ def generate_item(category, strength):
     return Items.BrainEquipment(item_template.name, item_template.description,
                                 item_template.item_type.lower(),
                                 stats, quote)
+
 
 def stats_from_template(item_template):
     "Gets the correct stats for equipment."
@@ -193,6 +196,7 @@ MONSTER_LOOKUP = {
         "These monstrosities crawl around on four arms and are large enough to "
         "swallow people in a single bite. Be wary of them.")
 }
+
 
 def generate_monster(strength, category, item_strength):
     "Generates a monster"

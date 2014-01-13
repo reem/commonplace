@@ -362,7 +362,7 @@ THRONE_ROOMS[CAT1] = PoemRoom("Throne of Mathematics",
                                            "Daniel Mclaury - http://qr.ae/Iga8l",
                                            CAT1)),
                                  monster_type='FinalBoss'))
-BrainMonster.set_difficulty(4)
+BrainMonster.set_difficulty(6)
 THRONE_ROOMS[CAT2] = PoemRoom("Throne of Snobbery",
                    "Books and words line the halls of this room.",
                    {}, POEMS[1],
@@ -372,7 +372,7 @@ THRONE_ROOMS[CAT2] = PoemRoom("Throne of Snobbery",
                                                 "glyphs that nobody knows.",
                                                 SUMMER_WINTER_SET.helmet,
                                                 str(QUOTES[CAT2].pop())))
-BrainMonster.set_difficulty(8)
+BrainMonster.set_difficulty(15)
 THRONE_ROOMS[CAT3] = PoemRoom("Throne of the World",
                    "This room has the vestiges of a busy place. World changing work "
                    "is done here.",
@@ -383,7 +383,7 @@ THRONE_ROOMS[CAT3] = PoemRoom("Throne of the World",
                                                 "challenge.",
                                                 SUMMER_WINTER_SET.armor,
                                                 str(QUOTES[CAT3].pop())))
-BrainMonster.set_difficulty(8)
+BrainMonster.set_difficulty(15)
 THRONE_ROOMS[CAT4] = PoemRoom("Throne of Cynicism",
                    "A plain room with a large wooden throne.",
                    {}, POEMS[3],
@@ -392,7 +392,7 @@ THRONE_ROOMS[CAT4] = PoemRoom("Throne of Cynicism",
                                                 "He thinks you are dumb.",
                                                 SUMMER_WINTER_SET.shield,
                                                 str(QUOTES[CAT4].pop())))
-BrainMonster.set_difficulty(8)
+BrainMonster.set_difficulty(15)
 THRONE_ROOMS[CAT5] = PoemRoom("Throne of Words",
                    "Letters and words dance around this room in glee. "
                    "This is a place of sharing and knowledge, but also "

@@ -71,7 +71,7 @@ class BrainMonster(BaseMonster):
 
     @classmethod
     def shadow_knight(cls, name, description, drop, quote,
-                      start_health=30, attack=6,
+                      start_health=30, attack=10,
                       monster_type='knight'):
         "Alternative constructor with useful defaults."
         return cls(name, description, start_health, attack,
@@ -79,7 +79,7 @@ class BrainMonster(BaseMonster):
 
     @classmethod
     def shadow_gargantuan(cls, name, description, drop, quote,
-                          start_health=100, attack=15,
+                          start_health=100, attack=25,
                           monster_type='gargantuan'):
         "Alternative constructor with useful defaults."
         return cls(name, description, start_health, attack,
@@ -87,7 +87,7 @@ class BrainMonster(BaseMonster):
 
     @classmethod
     def shadow_giant(cls, name, description, drop, quote,
-                     start_health=50, attack=10,
+                     start_health=50, attack=15,
                      monster_type='giant'):
         "Alternative constructor with useful defaults."
         return cls(name, description, start_health, attack,
@@ -95,7 +95,7 @@ class BrainMonster(BaseMonster):
 
     @classmethod
     def shadow_guardian(cls, name, description, drop, quote,
-                        start_health=200, attack=30,
+                        start_health=200, attack=50,
                         monster_type='guardian'):
         "Alternative constructor for guardians."
         return cls(name, description, start_health, attack,
